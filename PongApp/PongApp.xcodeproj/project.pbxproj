@@ -18,6 +18,7 @@
 		CB96863528A4F119005F0283 /* Data+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863228A4F119005F0283 /* Data+Decoder.swift */; };
 		CB96863628A4F119005F0283 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863328A4F119005F0283 /* SocketService.swift */; };
 		CB96863728A4F119005F0283 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863428A4F119005F0283 /* Move.swift */; };
+		CB96864028A58D96005F0283 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863F28A58D96005F0283 /* FacialExpression.swift */; };
 		EF46FE436F41E5B58D91E37C /* Pods_PongApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC54087EC8E99398A82FA4F1 /* Pods_PongApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		CB96863228A4F119005F0283 /* Data+Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Decoder.swift"; sourceTree = "<group>"; };
 		CB96863328A4F119005F0283 /* SocketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		CB96863428A4F119005F0283 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		CB96863F28A58D96005F0283 /* FacialExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
 		FC54087EC8E99398A82FA4F1 /* Pods_PongApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PongApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC61995ECC71CF3C516634F9 /* Pods-PongApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PongApp.debug.xcconfig"; path = "Target Support Files/Pods-PongApp/Pods-PongApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 		7CEC206728A4AF8000A80BF5 /* PongApp */ = {
 			isa = PBXGroup;
 			children = (
+				CB96863E28A58D86005F0283 /* Models */,
 				CB96863828A56531005F0283 /* SocketService */,
 				7CEC207B28A4B55C00A80BF5 /* View */,
 				7CEC206828A4AF8000A80BF5 /* PongAppApp.swift */,
@@ -126,6 +129,14 @@
 				7C3DA16A28A5128600178027 /* ARFaceView.swift */,
 			);
 			path = AR;
+			sourceTree = "<group>";
+		};
+		CB96863E28A58D86005F0283 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB96863F28A58D96005F0283 /* FacialExpression.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FEAE31EE3E2349C783777E3A /* Frameworks */ = {
@@ -254,6 +265,7 @@
 				CB96863528A4F119005F0283 /* Data+Decoder.swift in Sources */,
 				7CEC207728A4AFB900A80BF5 /* MovementView.swift in Sources */,
 				7C3DA16B28A5128600178027 /* ARFaceView.swift in Sources */,
+				CB96864028A58D96005F0283 /* FacialExpression.swift in Sources */,
 				7CEC206B28A4AF8000A80BF5 /* ContentView.swift in Sources */,
 				CB96863728A4F119005F0283 /* Move.swift in Sources */,
 				7CEC207D28A4B56800A80BF5 /* Login.swift in Sources */,
