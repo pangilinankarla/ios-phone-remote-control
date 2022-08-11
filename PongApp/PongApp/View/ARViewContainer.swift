@@ -37,7 +37,7 @@ extension ARSCNView: ARSessionDelegate, ARSCNViewDelegate {
     configuration.isLightEstimationEnabled = true
     self.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     
-    self.session.delegate = self
+    self.delegate = self
   }
 
   public func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
@@ -60,14 +60,36 @@ extension ARSCNView: ARSessionDelegate, ARSCNViewDelegate {
     if let faceAnchor = anchor as? ARFaceAnchor, let faceGeometry = node.geometry as? ARSCNFaceGeometry{
       faceGeometry.update(from: faceAnchor.geometry)
       
-      readMyFace(anchor: faceAnchor)
+      let result = readMyFace(anchor: faceAnchor)
+      
+      print("Your face rigth now: \(result)")
       
     }
   }
   
-  func readMyFace(anchor: ARFaceAnchor) {
+  func readMyFace(anchor: ARFaceAnchor) -> String {
     let mouthSmileLeft = anchor.blendShapes[.mouthSmileLeft]
     let mouthSmileRight = anchor.blendShapes[.mouthSmileRight]
+    let cheekPuff = anchor.blendShapes[.cheekPuff]
+    let tongueOut = anchor.blendShapes[.tongueOut]
+    let jawLeft = anchor.blendShapes[.jawLeft]
+    let eyeSquintLeft = anchor.blendShapes[.eyeSquintLeft]
+    
+    var faceResult = "You are still faced"
+  
+    if ((mouthSmileLeft?.decimalValue ?? 0.0) + (mouthSmileRight?.decimalValue ?? 0.0)) > 0.9 { faceResult = "You are smiling. "  }
+    // smiling
+    if cheekPuff?.decimalValue ?? 0.0 > 0.4 {
+      faceResult = "You are puffing your cheeks "
+    }
+   // puffy cheeks
+    if tongueOut?.decimalValue ?? 0.0 > 0.1 {faceResult = "You are sticking your tongue out"}
+    // tongue out
+    if jawLeft?.decimalValue ?? 0.0 > 0.1 {faceResult = "You are moving your jaw to the left"}
+    // left jaw
+    if eyeSquintLeft?.decimalValue ?? 0.0 > 0.2 {faceResult = "You are squinting your left eye"}
+    
+    return faceResult
   }
 
 }

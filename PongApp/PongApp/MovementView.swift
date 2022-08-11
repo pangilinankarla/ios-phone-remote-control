@@ -65,7 +65,9 @@ struct MovementView: View {
           .cornerRadius(8)
         }
         .background(
-          NavigationLink(destination: ARViewContainer().edgesIgnoringSafeArea(.all), isActive: $isShowAR){
+//          NavigationLink(destination: ARViewContainer().edgesIgnoringSafeArea(.all), isActive: $isShowAR)
+          NavigationLink(destination: ARFaceView(), isActive: $isShowAR)
+          {
             EmptyView()
           }
             .hidden()
