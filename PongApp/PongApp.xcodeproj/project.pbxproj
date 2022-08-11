@@ -81,9 +81,7 @@
 		7CEC206728A4AF8000A80BF5 /* PongApp */ = {
 			isa = PBXGroup;
 			children = (
-				CB96863228A4F119005F0283 /* Data+Decoder.swift */,
-				CB96863428A4F119005F0283 /* Move.swift */,
-				CB96863328A4F119005F0283 /* SocketService.swift */,
+				CB96863828A56531005F0283 /* SocketService */,
 				7CEC207B28A4B55C00A80BF5 /* View */,
 				7CEC206828A4AF8000A80BF5 /* PongAppApp.swift */,
 				7CEC206A28A4AF8000A80BF5 /* ContentView.swift */,
@@ -110,6 +108,16 @@
 				7C3DA16A28A5128600178027 /* ARFaceView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CB96863828A56531005F0283 /* SocketService */ = {
+			isa = PBXGroup;
+			children = (
+				CB96863228A4F119005F0283 /* Data+Decoder.swift */,
+				CB96863428A4F119005F0283 /* Move.swift */,
+				CB96863328A4F119005F0283 /* SocketService.swift */,
+			);
+			path = SocketService;
 			sourceTree = "<group>";
 		};
 		FEAE31EE3E2349C783777E3A /* Frameworks */ = {

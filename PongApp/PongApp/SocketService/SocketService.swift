@@ -9,10 +9,11 @@ import Foundation
 import SocketIO
 
 final class SocketService: ObservableObject {
-  // TODO: ❗️ Replace ip to test ❗️
+  // TODO: ❗️ Replace url string to test ❗️
   private var manager = SocketManager(
     //    socketURL: URL(string: "ws://localhost:3000")!,
-    socketURL: URL(string: "http://192.168.0.xxx:3000")!,
+//    socketURL: URL(string: "http://192.168.0.xxx:3000")!,
+    socketURL: URL(string: "https://b74c-125-166-0-117.ap.ngrok.io")!,
     config: [.log(true), .compress]
   )
   
@@ -55,8 +56,12 @@ final class SocketService: ObservableObject {
   }
   
   func sendMove(_ move: Move) {
-//    let move = Move(moveUp: true, moveDown: false)
-    guard let jsonData = try? JSONEncoder().encode(move) else { return }
-    manager.defaultSocket.emit("Send move", jsonData)
+//    guard let jsonData = try? JSONEncoder().encode(move) else { return }
+    manager.defaultSocket.emit("move", "playerOneUp")
+  }
+
+  func sendMoveDown(_ move: Move) {
+//    guard let jsonData = try? JSONEncoder().encode(move) else { return }
+    manager.defaultSocket.emit("move", "playerOneDown")
   }
 }
