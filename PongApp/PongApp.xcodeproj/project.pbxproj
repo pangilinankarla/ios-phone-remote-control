@@ -14,9 +14,14 @@
 		7CEC207728A4AFB900A80BF5 /* MovementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEC207628A4AFB900A80BF5 /* MovementView.swift */; };
 		7CEC207D28A4B56800A80BF5 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEC207C28A4B56800A80BF5 /* Login.swift */; };
 		7CEC207F28A4BDA400A80BF5 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEC207E28A4BDA400A80BF5 /* ARViewContainer.swift */; };
+		AE746949C1526279FD110780 /* Pods_PongApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20E7C6A2D3B0693ADF491C3 /* Pods_PongApp.framework */; };
+		CB96863528A4F119005F0283 /* Data+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863228A4F119005F0283 /* Data+Decoder.swift */; };
+		CB96863628A4F119005F0283 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863328A4F119005F0283 /* SocketService.swift */; };
+		CB96863728A4F119005F0283 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863428A4F119005F0283 /* Move.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63B35D821EBA6D420FD44707 /* Pods-PongApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PongApp.release.xcconfig"; path = "Target Support Files/Pods-PongApp/Pods-PongApp.release.xcconfig"; sourceTree = "<group>"; };
 		7CEC206528A4AF8000A80BF5 /* PongApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PongApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEC206828A4AF8000A80BF5 /* PongAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongAppApp.swift; sourceTree = "<group>"; };
 		7CEC206A28A4AF8000A80BF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,6 +30,11 @@
 		7CEC207628A4AFB900A80BF5 /* MovementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementView.swift; sourceTree = "<group>"; };
 		7CEC207C28A4B56800A80BF5 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		7CEC207E28A4BDA400A80BF5 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		CB96863228A4F119005F0283 /* Data+Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Decoder.swift"; sourceTree = "<group>"; };
+		CB96863328A4F119005F0283 /* SocketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		CB96863428A4F119005F0283 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		D20E7C6A2D3B0693ADF491C3 /* Pods_PongApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PongApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4C15103441A4CAB49FA4475 /* Pods-PongApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PongApp.debug.xcconfig"; path = "Target Support Files/Pods-PongApp/Pods-PongApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +42,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE746949C1526279FD110780 /* Pods_PongApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		093C4231E2DAD6808C415E25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4C15103441A4CAB49FA4475 /* Pods-PongApp.debug.xcconfig */,
+				63B35D821EBA6D420FD44707 /* Pods-PongApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7CEC205C28A4AF8000A80BF5 = {
 			isa = PBXGroup;
 			children = (
 				7CEC206728A4AF8000A80BF5 /* PongApp */,
 				7CEC206628A4AF8000A80BF5 /* Products */,
+				093C4231E2DAD6808C415E25 /* Pods */,
+				F4E5DAC45BDE0BF29FE63A63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +79,9 @@
 		7CEC206728A4AF8000A80BF5 /* PongApp */ = {
 			isa = PBXGroup;
 			children = (
+				CB96863228A4F119005F0283 /* Data+Decoder.swift */,
+				CB96863428A4F119005F0283 /* Move.swift */,
+				CB96863328A4F119005F0283 /* SocketService.swift */,
 				7CEC207B28A4B55C00A80BF5 /* View */,
 				7CEC206828A4AF8000A80BF5 /* PongAppApp.swift */,
 				7CEC206A28A4AF8000A80BF5 /* ContentView.swift */,
@@ -84,6 +109,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F4E5DAC45BDE0BF29FE63A63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D20E7C6A2D3B0693ADF491C3 /* Pods_PongApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +124,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CEC207328A4AF8100A80BF5 /* Build configuration list for PBXNativeTarget "PongApp" */;
 			buildPhases = (
+				A6B142F83DB16A93BC07D32C /* [CP] Check Pods Manifest.lock */,
 				7CEC206128A4AF8000A80BF5 /* Sources */,
 				7CEC206228A4AF8000A80BF5 /* Frameworks */,
 				7CEC206328A4AF8000A80BF5 /* Resources */,
+				AEEE220DDC968124D774983F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,13 +184,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A6B142F83DB16A93BC07D32C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PongApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEEE220DDC968124D774983F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PongApp/Pods-PongApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PongApp/Pods-PongApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PongApp/Pods-PongApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7CEC206128A4AF8000A80BF5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB96863628A4F119005F0283 /* SocketService.swift in Sources */,
+				CB96863528A4F119005F0283 /* Data+Decoder.swift in Sources */,
 				7CEC207728A4AFB900A80BF5 /* MovementView.swift in Sources */,
 				7CEC206B28A4AF8000A80BF5 /* ContentView.swift in Sources */,
+				CB96863728A4F119005F0283 /* Move.swift in Sources */,
 				7CEC207D28A4B56800A80BF5 /* Login.swift in Sources */,
 				7CEC206928A4AF8000A80BF5 /* PongAppApp.swift in Sources */,
 				7CEC207F28A4BDA400A80BF5 /* ARViewContainer.swift in Sources */,
@@ -281,13 +361,14 @@
 		};
 		7CEC207428A4AF8100A80BF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4C15103441A4CAB49FA4475 /* Pods-PongApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PongApp/Preview Content\"";
-				DEVELOPMENT_TEAM = ND4DZWJCVY;
+				DEVELOPMENT_TEAM = C3SU5XB7YC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera to enable Augmented Reality";
@@ -311,13 +392,14 @@
 		};
 		7CEC207528A4AF8100A80BF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63B35D821EBA6D420FD44707 /* Pods-PongApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PongApp/Preview Content\"";
-				DEVELOPMENT_TEAM = ND4DZWJCVY;
+				DEVELOPMENT_TEAM = C3SU5XB7YC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera to enable Augmented Reality";

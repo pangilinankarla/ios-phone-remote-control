@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct MovementView: View {
-  
+  @StateObject private var service = SocketService()
   @State var isShowAR = false
   
     var body: some View {
       NavigationView {
         VStack {
-          Button(action: {}) {
+          Button("Connect") {
+            service.establishConnection()
+          }
+          
+          Button("Disconnect") {
+            service.closeConnection()
+          }
+          
+          Button(action: {
+            service.sendMove(Move(moveUp: true, moveDown: false))
+          }) {
             HStack{
               Text("Up")
               .padding(.horizontal)
@@ -26,7 +36,9 @@ struct MovementView: View {
           .background(Color.blue)
           .cornerRadius(8)
           
-          Button(action: {}) {
+          Button(action: {
+            service.sendMove(Move(moveUp: false, moveDown: true))
+          }) {
             HStack{
               Text("Down")
               .padding(.horizontal)

@@ -15,7 +15,7 @@ struct ARViewContainer: UIViewRepresentable {
   
   func makeUIView(context: Context) -> ARSCNView {
     let arView = ARSCNView(frame: .zero)
-    
+  
     arView.setupForFaceTracking()
     
     return arView

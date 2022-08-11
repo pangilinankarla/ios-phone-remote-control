@@ -12,7 +12,7 @@ final class SocketService: ObservableObject {
   // TODO: ❗️ Replace ip to test ❗️
   private var manager = SocketManager(
     //    socketURL: URL(string: "ws://localhost:3000")!,
-    socketURL: URL(string: "http://192.168.0.241:3000")!,
+    socketURL: URL(string: "http://192.168.0.xxx:3000")!,
     config: [.log(true), .compress]
   )
   
@@ -54,8 +54,8 @@ final class SocketService: ObservableObject {
     manager.defaultSocket.disconnect()
   }
   
-  func sendMove() {
-    let move = Move(moveUp: true, moveDown: false)
+  func sendMove(_ move: Move) {
+//    let move = Move(moveUp: true, moveDown: false)
     guard let jsonData = try? JSONEncoder().encode(move) else { return }
     manager.defaultSocket.emit("Send move", jsonData)
   }
