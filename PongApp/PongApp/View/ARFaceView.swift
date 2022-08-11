@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ARFaceView: View {
+  @State private var log = ""
     var body: some View {
       VStack {
-        ARViewContainer()
+        ARViewContainer(message: $log)
           .edgesIgnoringSafeArea(.all)
         
-        Text("Hello, World!")
+        Text("\(log)")
       }
         
     }

@@ -11,23 +11,37 @@ import RealityKit
 import SceneKit
 
 struct ARViewContainer: UIViewRepresentable {
-  typealias UIViewType = ARSCNView
-  
-  func makeUIView(context: Context) -> ARSCNView {
-    let arView = ARSCNView(frame: .zero)
-  
+  typealias UIViewType = CustomARSCNView
+  @Binding var message: String
+
+  func makeUIView(context: Context) -> CustomARSCNView {
+    let arView = CustomARSCNView(frame: .zero)
+    arView.logger = self
     arView.setupForFaceTracking()
     
     return arView
   }
   
-  func updateUIView(_ uiView: ARSCNView, context: Context) {
+  func updateUIView(_ uiView: CustomARSCNView, context: Context) {
     
   }
-  
 }
 
-extension ARSCNView: ARSessionDelegate, ARSCNViewDelegate {
+extension ARViewContainer: ARSCNViewLogger {
+  func log(_ log: String) {
+    message = log
+  }
+}
+
+protocol ARSCNViewLogger {
+  func log(_ log: String)
+}
+
+final class CustomARSCNView: ARSCNView {
+  var logger: ARSCNViewLogger?
+}
+
+extension CustomARSCNView: ARSessionDelegate, ARSCNViewDelegate {
   func setupForFaceTracking() {
 //    guard ARFaceTrackingConfiguration.isSupported else { return }
     let configuration = ARFaceTrackingConfiguration()
@@ -62,8 +76,9 @@ extension ARSCNView: ARSessionDelegate, ARSCNViewDelegate {
       
       let result = readMyFace(anchor: faceAnchor)
       
-      print("Your face rigth now: \(result)")
-      
+      let log = "Your face right now: \(result)"
+      print(log)
+      logger?.log(log)
     }
   }
   
