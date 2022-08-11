@@ -103,9 +103,8 @@
 		7CEC207B28A4B55C00A80BF5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB96863B28A573F5005F0283 /* AR */,
 				7CEC207C28A4B56800A80BF5 /* Login.swift */,
-				7CEC207E28A4BDA400A80BF5 /* ARViewContainer.swift */,
-				7C3DA16A28A5128600178027 /* ARFaceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,6 +117,15 @@
 				CB96863328A4F119005F0283 /* SocketService.swift */,
 			);
 			path = SocketService;
+			sourceTree = "<group>";
+		};
+		CB96863B28A573F5005F0283 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				7CEC207E28A4BDA400A80BF5 /* ARViewContainer.swift */,
+				7C3DA16A28A5128600178027 /* ARFaceView.swift */,
+			);
+			path = AR;
 			sourceTree = "<group>";
 		};
 		FEAE31EE3E2349C783777E3A /* Frameworks */ = {
