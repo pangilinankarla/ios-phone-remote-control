@@ -18,6 +18,7 @@
 		CB96863528A4F119005F0283 /* Data+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863228A4F119005F0283 /* Data+Decoder.swift */; };
 		CB96863628A4F119005F0283 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863328A4F119005F0283 /* SocketService.swift */; };
 		CB96863728A4F119005F0283 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863428A4F119005F0283 /* Move.swift */; };
+		CB96863D28A5744D005F0283 /* CustomARSCNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863C28A5744D005F0283 /* CustomARSCNView.swift */; };
 		CB96864028A58D96005F0283 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863F28A58D96005F0283 /* FacialExpression.swift */; };
 		CB96864328A58E93005F0283 /* Double+RoundingOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96864228A58E93005F0283 /* Double+RoundingOff.swift */; };
 		EF46FE436F41E5B58D91E37C /* Pods_PongApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC54087EC8E99398A82FA4F1 /* Pods_PongApp.framework */; };
@@ -37,6 +38,7 @@
 		CB96863228A4F119005F0283 /* Data+Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Decoder.swift"; sourceTree = "<group>"; };
 		CB96863328A4F119005F0283 /* SocketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		CB96863428A4F119005F0283 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		CB96863C28A5744D005F0283 /* CustomARSCNView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARSCNView.swift; sourceTree = "<group>"; };
 		CB96863F28A58D96005F0283 /* FacialExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
 		CB96864228A58E93005F0283 /* Double+RoundingOff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+RoundingOff.swift"; sourceTree = "<group>"; };
 		FC54087EC8E99398A82FA4F1 /* Pods_PongApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PongApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 			children = (
 				7CEC207E28A4BDA400A80BF5 /* ARViewContainer.swift */,
 				7C3DA16A28A5128600178027 /* ARFaceView.swift */,
+				CB96863C28A5744D005F0283 /* CustomARSCNView.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				CB96863628A4F119005F0283 /* SocketService.swift in Sources */,
 				CB96863528A4F119005F0283 /* Data+Decoder.swift in Sources */,
 				CB96864328A58E93005F0283 /* Double+RoundingOff.swift in Sources */,
+				CB96863D28A5744D005F0283 /* CustomARSCNView.swift in Sources */,
 				7CEC207728A4AFB900A80BF5 /* MovementView.swift in Sources */,
 				7C3DA16B28A5128600178027 /* ARFaceView.swift in Sources */,
 				CB96864028A58D96005F0283 /* FacialExpression.swift in Sources */,
