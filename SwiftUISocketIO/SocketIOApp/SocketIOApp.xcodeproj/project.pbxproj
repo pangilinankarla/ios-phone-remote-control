@@ -14,6 +14,12 @@
 		CB72762228A4A6F6001D934A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB72761028A4A6F5001D934A /* ContentView.swift */; };
 		CB72762328A4A6F6001D934A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB72761128A4A6F6001D934A /* Assets.xcassets */; };
 		CB72762428A4A6F6001D934A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB72761128A4A6F6001D934A /* Assets.xcassets */; };
+		CB96862A28A4E879005F0283 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96862928A4E879005F0283 /* SocketService.swift */; };
+		CB96862B28A4E879005F0283 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96862928A4E879005F0283 /* SocketService.swift */; };
+		CB96862D28A4E8EB005F0283 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96862C28A4E8EB005F0283 /* Move.swift */; };
+		CB96862E28A4E8EB005F0283 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96862C28A4E8EB005F0283 /* Move.swift */; };
+		CB96863028A4ECF0005F0283 /* Data+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96862F28A4ECF0005F0283 /* Data+Decoder.swift */; };
+		CB96863128A4ECF0005F0283 /* Data+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96862F28A4ECF0005F0283 /* Data+Decoder.swift */; };
 		D18C0D471326C54F5216E136 /* Pods_SocketIOApp__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE435BA2828D1B476FE5489 /* Pods_SocketIOApp__macOS_.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +36,9 @@
 		CB72761628A4A6F6001D934A /* SocketIOApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocketIOApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB72761C28A4A6F6001D934A /* SocketIOApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocketIOApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB72761E28A4A6F6001D934A /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CB96862928A4E879005F0283 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		CB96862C28A4E8EB005F0283 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		CB96862F28A4ECF0005F0283 /* Data+Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decoder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +97,9 @@
 			children = (
 				CB72760F28A4A6F5001D934A /* SocketIOApp.swift */,
 				CB72761028A4A6F5001D934A /* ContentView.swift */,
+				CB96862928A4E879005F0283 /* SocketService.swift */,
+				CB96862C28A4E8EB005F0283 /* Move.swift */,
+				CB96862F28A4ECF0005F0283 /* Data+Decoder.swift */,
 				CB72761128A4A6F6001D934A /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -293,8 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB96862D28A4E8EB005F0283 /* Move.swift in Sources */,
 				CB72762128A4A6F6001D934A /* ContentView.swift in Sources */,
 				CB72761F28A4A6F6001D934A /* SocketIOApp.swift in Sources */,
+				CB96863028A4ECF0005F0283 /* Data+Decoder.swift in Sources */,
+				CB96862A28A4E879005F0283 /* SocketService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,8 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB96862E28A4E8EB005F0283 /* Move.swift in Sources */,
 				CB72762228A4A6F6001D934A /* ContentView.swift in Sources */,
 				CB72762028A4A6F6001D934A /* SocketIOApp.swift in Sources */,
+				CB96863128A4ECF0005F0283 /* Data+Decoder.swift in Sources */,
+				CB96862B28A4E879005F0283 /* SocketService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
