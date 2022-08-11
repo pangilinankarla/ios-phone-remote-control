@@ -19,6 +19,7 @@
 		CB96863628A4F119005F0283 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863328A4F119005F0283 /* SocketService.swift */; };
 		CB96863728A4F119005F0283 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863428A4F119005F0283 /* Move.swift */; };
 		CB96864028A58D96005F0283 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863F28A58D96005F0283 /* FacialExpression.swift */; };
+		CB96864328A58E93005F0283 /* Double+RoundingOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96864228A58E93005F0283 /* Double+RoundingOff.swift */; };
 		EF46FE436F41E5B58D91E37C /* Pods_PongApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC54087EC8E99398A82FA4F1 /* Pods_PongApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		CB96863328A4F119005F0283 /* SocketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		CB96863428A4F119005F0283 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		CB96863F28A58D96005F0283 /* FacialExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
+		CB96864228A58E93005F0283 /* Double+RoundingOff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+RoundingOff.swift"; sourceTree = "<group>"; };
 		FC54087EC8E99398A82FA4F1 /* Pods_PongApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PongApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC61995ECC71CF3C516634F9 /* Pods-PongApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PongApp.debug.xcconfig"; path = "Target Support Files/Pods-PongApp/Pods-PongApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 				CB96863E28A58D86005F0283 /* Models */,
 				CB96863828A56531005F0283 /* SocketService */,
 				7CEC207B28A4B55C00A80BF5 /* View */,
+				CB96864128A58E66005F0283 /* Extensions */,
 				7CEC206828A4AF8000A80BF5 /* PongAppApp.swift */,
 				7CEC206A28A4AF8000A80BF5 /* ContentView.swift */,
 				7CEC207628A4AFB900A80BF5 /* MovementView.swift */,
@@ -137,6 +140,14 @@
 				CB96863F28A58D96005F0283 /* FacialExpression.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CB96864128A58E66005F0283 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB96864228A58E93005F0283 /* Double+RoundingOff.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FEAE31EE3E2349C783777E3A /* Frameworks */ = {
@@ -263,6 +274,7 @@
 			files = (
 				CB96863628A4F119005F0283 /* SocketService.swift in Sources */,
 				CB96863528A4F119005F0283 /* Data+Decoder.swift in Sources */,
+				CB96864328A58E93005F0283 /* Double+RoundingOff.swift in Sources */,
 				7CEC207728A4AFB900A80BF5 /* MovementView.swift in Sources */,
 				7C3DA16B28A5128600178027 /* ARFaceView.swift in Sources */,
 				CB96864028A58D96005F0283 /* FacialExpression.swift in Sources */,
