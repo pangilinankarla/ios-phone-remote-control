@@ -1,0 +1,6 @@
+framework module Pods_SocketIOApp__macOS_ {
+  umbrella header "Pods-SocketIOApp (macOS)-umbrella.h"
+
+  export *
+  module * { export * }
+}

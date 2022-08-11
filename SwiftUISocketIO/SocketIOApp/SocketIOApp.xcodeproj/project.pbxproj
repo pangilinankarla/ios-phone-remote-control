@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2577B74D0C5EE0BA9E090A4B /* Pods_SocketIOApp__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899F908BD1C31C0FCE46C6FD /* Pods_SocketIOApp__iOS_.framework */; };
+		CB72761F28A4A6F6001D934A /* SocketIOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB72760F28A4A6F5001D934A /* SocketIOApp.swift */; };
+		CB72762028A4A6F6001D934A /* SocketIOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB72760F28A4A6F5001D934A /* SocketIOApp.swift */; };
+		CB72762128A4A6F6001D934A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB72761028A4A6F5001D934A /* ContentView.swift */; };
+		CB72762228A4A6F6001D934A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB72761028A4A6F5001D934A /* ContentView.swift */; };
+		CB72762328A4A6F6001D934A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB72761128A4A6F6001D934A /* Assets.xcassets */; };
+		CB72762428A4A6F6001D934A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB72761128A4A6F6001D934A /* Assets.xcassets */; };
+		D18C0D471326C54F5216E136 /* Pods_SocketIOApp__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE435BA2828D1B476FE5489 /* Pods_SocketIOApp__macOS_.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1FAAFB666B8D708D8EFF4724 /* Pods-SocketIOApp (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocketIOApp (macOS).debug.xcconfig"; path = "Target Support Files/Pods-SocketIOApp (macOS)/Pods-SocketIOApp (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		7D85ED28A39470D12884B646 /* Pods-SocketIOApp (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocketIOApp (iOS).release.xcconfig"; path = "Target Support Files/Pods-SocketIOApp (iOS)/Pods-SocketIOApp (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		85BB1F4DDD67BC871A7ED1ED /* Pods-SocketIOApp (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocketIOApp (iOS).debug.xcconfig"; path = "Target Support Files/Pods-SocketIOApp (iOS)/Pods-SocketIOApp (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		899F908BD1C31C0FCE46C6FD /* Pods_SocketIOApp__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocketIOApp__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93471B8FD63FE48F279C5C56 /* Pods-SocketIOApp (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocketIOApp (macOS).release.xcconfig"; path = "Target Support Files/Pods-SocketIOApp (macOS)/Pods-SocketIOApp (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		BAE435BA2828D1B476FE5489 /* Pods_SocketIOApp__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocketIOApp__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB72760F28A4A6F5001D934A /* SocketIOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOApp.swift; sourceTree = "<group>"; };
+		CB72761028A4A6F5001D934A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CB72761128A4A6F6001D934A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB72761628A4A6F6001D934A /* SocketIOApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocketIOApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB72761C28A4A6F6001D934A /* SocketIOApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocketIOApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB72761E28A4A6F6001D934A /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB72761328A4A6F6001D934A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2577B74D0C5EE0BA9E090A4B /* Pods_SocketIOApp__iOS_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB72761928A4A6F6001D934A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D18C0D471326C54F5216E136 /* Pods_SocketIOApp__macOS_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2948766E4191B57FAFAB4FC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				899F908BD1C31C0FCE46C6FD /* Pods_SocketIOApp__iOS_.framework */,
+				BAE435BA2828D1B476FE5489 /* Pods_SocketIOApp__macOS_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A3540F4C5F67F5725CB0AE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85BB1F4DDD67BC871A7ED1ED /* Pods-SocketIOApp (iOS).debug.xcconfig */,
+				7D85ED28A39470D12884B646 /* Pods-SocketIOApp (iOS).release.xcconfig */,
+				1FAAFB666B8D708D8EFF4724 /* Pods-SocketIOApp (macOS).debug.xcconfig */,
+				93471B8FD63FE48F279C5C56 /* Pods-SocketIOApp (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CB72760928A4A6F5001D934A = {
+			isa = PBXGroup;
+			children = (
+				CB72760E28A4A6F5001D934A /* Shared */,
+				CB72761D28A4A6F6001D934A /* macOS */,
+				CB72761728A4A6F6001D934A /* Products */,
+				6A3540F4C5F67F5725CB0AE2 /* Pods */,
+				2948766E4191B57FAFAB4FC5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CB72760E28A4A6F5001D934A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CB72760F28A4A6F5001D934A /* SocketIOApp.swift */,
+				CB72761028A4A6F5001D934A /* ContentView.swift */,
+				CB72761128A4A6F6001D934A /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CB72761728A4A6F6001D934A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB72761628A4A6F6001D934A /* SocketIOApp.app */,
+				CB72761C28A4A6F6001D934A /* SocketIOApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB72761D28A4A6F6001D934A /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB72761E28A4A6F6001D934A /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB72761528A4A6F6001D934A /* SocketIOApp (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB72762728A4A6F6001D934A /* Build configuration list for PBXNativeTarget "SocketIOApp (iOS)" */;
+			buildPhases = (
+				D58DCA508565C3787B07C845 /* [CP] Check Pods Manifest.lock */,
+				CB72761228A4A6F6001D934A /* Sources */,
+				CB72761328A4A6F6001D934A /* Frameworks */,
+				CB72761428A4A6F6001D934A /* Resources */,
+				632AC5D9B22F3C51321649FC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SocketIOApp (iOS)";
+			productName = "SocketIOApp (iOS)";
+			productReference = CB72761628A4A6F6001D934A /* SocketIOApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB72761B28A4A6F6001D934A /* SocketIOApp (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB72762A28A4A6F6001D934A /* Build configuration list for PBXNativeTarget "SocketIOApp (macOS)" */;
+			buildPhases = (
+				5E70E61589E39AD66D5EAD3E /* [CP] Check Pods Manifest.lock */,
+				CB72761828A4A6F6001D934A /* Sources */,
+				CB72761928A4A6F6001D934A /* Frameworks */,
+				CB72761A28A4A6F6001D934A /* Resources */,
+				D55996CB761668BEAB146F82 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SocketIOApp (macOS)";
+			productName = "SocketIOApp (macOS)";
+			productReference = CB72761C28A4A6F6001D934A /* SocketIOApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB72760A28A4A6F5001D934A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					CB72761528A4A6F6001D934A = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					CB72761B28A4A6F6001D934A = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = CB72760D28A4A6F5001D934A /* Build configuration list for PBXProject "SocketIOApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB72760928A4A6F5001D934A;
+			productRefGroup = CB72761728A4A6F6001D934A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB72761528A4A6F6001D934A /* SocketIOApp (iOS) */,
+				CB72761B28A4A6F6001D934A /* SocketIOApp (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB72761428A4A6F6001D934A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB72762328A4A6F6001D934A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB72761A28A4A6F6001D934A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB72762428A4A6F6001D934A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E70E61589E39AD66D5EAD3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SocketIOApp (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		632AC5D9B22F3C51321649FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocketIOApp (iOS)/Pods-SocketIOApp (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocketIOApp (iOS)/Pods-SocketIOApp (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocketIOApp (iOS)/Pods-SocketIOApp (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D55996CB761668BEAB146F82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocketIOApp (macOS)/Pods-SocketIOApp (macOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocketIOApp (macOS)/Pods-SocketIOApp (macOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocketIOApp (macOS)/Pods-SocketIOApp (macOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D58DCA508565C3787B07C845 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SocketIOApp (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB72761228A4A6F6001D934A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB72762128A4A6F6001D934A /* ContentView.swift in Sources */,
+				CB72761F28A4A6F6001D934A /* SocketIOApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB72761828A4A6F6001D934A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB72762228A4A6F6001D934A /* ContentView.swift in Sources */,
+				CB72762028A4A6F6001D934A /* SocketIOApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CB72762528A4A6F6001D934A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB72762628A4A6F6001D934A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CB72762828A4A6F6001D934A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85BB1F4DDD67BC871A7ED1ED /* Pods-SocketIOApp (iOS).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C3SU5XB7YC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karlapangilinan.poc.SocketIOApp;
+				PRODUCT_NAME = SocketIOApp;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB72762928A4A6F6001D934A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D85ED28A39470D12884B646 /* Pods-SocketIOApp (iOS).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C3SU5XB7YC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karlapangilinan.poc.SocketIOApp;
+				PRODUCT_NAME = SocketIOApp;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB72762B28A4A6F6001D934A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FAAFB666B8D708D8EFF4724 /* Pods-SocketIOApp (macOS).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C3SU5XB7YC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karlapangilinan.poc.SocketIOApp;
+				PRODUCT_NAME = SocketIOApp;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CB72762C28A4A6F6001D934A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93471B8FD63FE48F279C5C56 /* Pods-SocketIOApp (macOS).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C3SU5XB7YC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karlapangilinan.poc.SocketIOApp;
+				PRODUCT_NAME = SocketIOApp;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB72760D28A4A6F5001D934A /* Build configuration list for PBXProject "SocketIOApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB72762528A4A6F6001D934A /* Debug */,
+				CB72762628A4A6F6001D934A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB72762728A4A6F6001D934A /* Build configuration list for PBXNativeTarget "SocketIOApp (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB72762828A4A6F6001D934A /* Debug */,
+				CB72762928A4A6F6001D934A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB72762A28A4A6F6001D934A /* Build configuration list for PBXNativeTarget "SocketIOApp (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB72762B28A4A6F6001D934A /* Debug */,
+				CB72762C28A4A6F6001D934A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB72760A28A4A6F5001D934A /* Project object */;
+}

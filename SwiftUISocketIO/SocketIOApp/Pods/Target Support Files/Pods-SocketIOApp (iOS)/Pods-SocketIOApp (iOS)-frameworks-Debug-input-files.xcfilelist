@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-SocketIOApp (iOS)/Pods-SocketIOApp (iOS)-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift-iOS/SocketIO.framework
+${BUILT_PRODUCTS_DIR}/Starscream-iOS/Starscream.framework
