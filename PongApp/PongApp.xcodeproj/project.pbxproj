@@ -18,6 +18,7 @@
 		CB96863528A4F119005F0283 /* Data+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863228A4F119005F0283 /* Data+Decoder.swift */; };
 		CB96863628A4F119005F0283 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863328A4F119005F0283 /* SocketService.swift */; };
 		CB96863728A4F119005F0283 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863428A4F119005F0283 /* Move.swift */; };
+		CB96863A28A56623005F0283 /* PongRemoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863928A56623005F0283 /* PongRemoteView.swift */; };
 		CB96863D28A5744D005F0283 /* CustomARSCNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863C28A5744D005F0283 /* CustomARSCNView.swift */; };
 		CB96864028A58D96005F0283 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863F28A58D96005F0283 /* FacialExpression.swift */; };
 		CB96864328A58E93005F0283 /* Double+RoundingOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96864228A58E93005F0283 /* Double+RoundingOff.swift */; };
@@ -38,6 +39,7 @@
 		CB96863228A4F119005F0283 /* Data+Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Decoder.swift"; sourceTree = "<group>"; };
 		CB96863328A4F119005F0283 /* SocketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		CB96863428A4F119005F0283 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		CB96863928A56623005F0283 /* PongRemoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongRemoteView.swift; sourceTree = "<group>"; };
 		CB96863C28A5744D005F0283 /* CustomARSCNView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARSCNView.swift; sourceTree = "<group>"; };
 		CB96863F28A58D96005F0283 /* FacialExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
 		CB96864228A58E93005F0283 /* Double+RoundingOff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+RoundingOff.swift"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				CB96863B28A573F5005F0283 /* AR */,
 				7CEC207C28A4B56800A80BF5 /* Login.swift */,
+				CB96863928A56623005F0283 /* PongRemoteView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				7CEC207728A4AFB900A80BF5 /* MovementView.swift in Sources */,
 				7C3DA16B28A5128600178027 /* ARFaceView.swift in Sources */,
 				CB96864028A58D96005F0283 /* FacialExpression.swift in Sources */,
+				CB96863A28A56623005F0283 /* PongRemoteView.swift in Sources */,
 				7CEC206B28A4AF8000A80BF5 /* ContentView.swift in Sources */,
 				CB96863728A4F119005F0283 /* Move.swift in Sources */,
 				7CEC207D28A4B56800A80BF5 /* Login.swift in Sources */,

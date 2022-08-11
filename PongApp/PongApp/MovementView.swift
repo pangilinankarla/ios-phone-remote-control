@@ -9,69 +9,22 @@ import SwiftUI
 
 struct MovementView: View {
   @StateObject private var service = SocketService()
-  @State var isShowAR = false
   
     var body: some View {
       NavigationView {
-        VStack {
-          Button("Connect") {
-            service.establishConnection()
+        Form {
+          NavigationLink {
+            PongRemoteView(service: service)
+          } label: {
+            Text("Pong Remote")
           }
           
-          Button("Disconnect") {
-            service.closeConnection()
+          NavigationLink {
+            ARFaceView()
+          } label: {
+            Text("AR Camera")
           }
-          
-          Button(action: {
-            service.sendMove(Move(moveUp: true, moveDown: false))
-          }) {
-            HStack{
-              Text("Up")
-              .padding(.horizontal)
-            }
-            .padding()
-          }
-          .frame(width: 200, height: 60, alignment: .center)
-          .foregroundColor(Color.white)
-          .background(Color.blue)
-          .cornerRadius(8)
-          
-          Button(action: {
-            service.sendMove(Move(moveUp: false, moveDown: true))
-          }) {
-            HStack{
-              Text("Down")
-              .padding(.horizontal)
-            }
-            .padding()
-          }
-          .frame(width: 200, height: 60, alignment: .center)
-          .foregroundColor(Color.white)
-          .background(Color.blue)
-          .cornerRadius(8)
-          
-          Button(action: {
-            isShowAR = true
-          }) {
-            HStack{
-                Text("AR thing")
-                  .padding(.horizontal)
-            }
-            .padding()
-          }
-          .frame(width: 200, height: 60, alignment: .center)
-          .foregroundColor(Color.white)
-          .background(Color.blue)
-          .cornerRadius(8)
         }
-        .background(
-//          NavigationLink(destination: ARViewContainer().edgesIgnoringSafeArea(.all), isActive: $isShowAR)
-          NavigationLink(destination: ARFaceView(), isActive: $isShowAR)
-          {
-            EmptyView()
-          }
-            .hidden()
-        )
       }
     }
 }
