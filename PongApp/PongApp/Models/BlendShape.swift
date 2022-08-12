@@ -9,24 +9,24 @@ import Foundation
 
 struct BlendShape: Codable {
   let id: String = UUID().uuidString
-  var a: Int
-  var angry: Int
-  var blink: Int
-  var blinkLeft: Int
-  var blinkRight: Int
-  var e: Int
-  var fun: Int
-  var i: Int
-  var joy: Int
-  var lookDown: Int
-  var lookLeft: Int
-  var lookRight: Int
-  var lookUp: Int
-  var neutral: Int
-  var o: Int
-  var sorrow: Int
-  var u: Int
-  var unknown: Int
+  var a: Double
+  var angry: Double
+  var blink: Double
+  var blinkLeft: Double
+  var blinkRight: Double
+  var e: Double
+  var fun: Double
+  var i: Double
+  var joy: Double
+  var lookDown: Double
+  var lookLeft: Double
+  var lookRight: Double
+  var lookUp: Double
+  var neutral: Double
+  var o: Double
+  var sorrow: Double
+  var u: Double
+  var unknown: Double
   
   private enum CodingKeys: String, CodingKey {
     case id = "id"
@@ -79,7 +79,7 @@ extension BlendShape {
     let transformedBlendShape = BlendShape(
       a: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.a.rawValue }) != nil) ? 1 : 0,
       angry: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.angry.rawValue }) != nil) ? 1 : 0,
-      blink: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.blink.rawValue }) != nil) ? 1 : 0,
+      blink: expressions.first(where: { $0 is BlinkExpression })?.value ?? 0.0,
       blinkLeft: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.blinkLeft.rawValue }) != nil) ? 1 : 0,
       blinkRight: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.blinkRight.rawValue }) != nil) ? 1 : 0,
       e: 0,

@@ -167,7 +167,7 @@ struct LookDownExpression: Expression {
 }
 
 // MARK: - Blink
-struct BlinkExpression: Expression {
+class BlinkExpression: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -183,13 +183,22 @@ struct BlinkExpression: Expression {
   }
   
   func isExpressing(from: ARFaceAnchor) -> Bool {
-    guard
-      let eyeBlinkLeft = from.blendShapes[.eyeBlinkLeft],
-      let eyeBlinkRight = from.blendShapes[.eyeBlinkRight]
-    else { return false }
+    let targetValue = 0.4
+    let eyeBlinkLeft = from.blendShapes[.eyeBlinkLeft]
+    let eyeBlinkRight = from.blendShapes[.eyeBlinkRight]
+    let eyeBlinkLeftRounded = eyeBlinkLeft?.doubleValue.roundToPlaces(3)
+    let eyeBlinkRightRounded = eyeBlinkRight?.doubleValue.roundToPlaces(3)
     
-    return eyeBlinkLeft.doubleValue.roundToPlaces(1) > 0.8
-      && eyeBlinkRight.doubleValue.roundToPlaces(1) > 0.8
+    guard
+      let eyeBlinkLeftRounded = eyeBlinkLeftRounded,
+      let eyeBlinkRightRounded = eyeBlinkRightRounded,
+      eyeBlinkLeftRounded > targetValue,
+      eyeBlinkRightRounded > targetValue
+    else { return false }
+
+    value = ((eyeBlinkLeftRounded + eyeBlinkRightRounded)/2).roundToPlaces(2)
+
+    return true
   }
 }
 
