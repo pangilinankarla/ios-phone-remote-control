@@ -23,6 +23,7 @@
 		CB96864028A58D96005F0283 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863F28A58D96005F0283 /* FacialExpression.swift */; };
 		CB96864328A58E93005F0283 /* Double+RoundingOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96864228A58E93005F0283 /* Double+RoundingOff.swift */; };
 		CBF0AA3328A6081C0067BB74 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF0AA3228A6081C0067BB74 /* Expression.swift */; };
+		CBF0AA3628A619300067BB74 /* Expressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF0AA3528A619300067BB74 /* Expressions.swift */; };
 		CBF0AA3928A62FDA0067BB74 /* IsEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF0AA3828A62FDA0067BB74 /* IsEqual.swift */; };
 		EF46FE436F41E5B58D91E37C /* Pods_PongApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC54087EC8E99398A82FA4F1 /* Pods_PongApp.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		CB96863F28A58D96005F0283 /* FacialExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
 		CB96864228A58E93005F0283 /* Double+RoundingOff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+RoundingOff.swift"; sourceTree = "<group>"; };
 		CBF0AA3228A6081C0067BB74 /* Expression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
+		CBF0AA3528A619300067BB74 /* Expressions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expressions.swift; sourceTree = "<group>"; };
 		CBF0AA3828A62FDA0067BB74 /* IsEqual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsEqual.swift; sourceTree = "<group>"; };
 		FC54087EC8E99398A82FA4F1 /* Pods_PongApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PongApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC61995ECC71CF3C516634F9 /* Pods-PongApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PongApp.debug.xcconfig"; path = "Target Support Files/Pods-PongApp/Pods-PongApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				CBF0AA3228A6081C0067BB74 /* Expression.swift */,
+				CBF0AA3528A619300067BB74 /* Expressions.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				CB96864328A58E93005F0283 /* Double+RoundingOff.swift in Sources */,
 				CB96863D28A5744D005F0283 /* CustomARSCNView.swift in Sources */,
 				7CEC207728A4AFB900A80BF5 /* MovementView.swift in Sources */,
+				CBF0AA3628A619300067BB74 /* Expressions.swift in Sources */,
 				CBF0AA3328A6081C0067BB74 /* Expression.swift in Sources */,
 				7C3DA16B28A5128600178027 /* ARFaceView.swift in Sources */,
 				CB96864028A58D96005F0283 /* FacialExpression.swift in Sources */,
