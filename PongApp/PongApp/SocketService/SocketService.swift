@@ -71,7 +71,7 @@ final class SocketService: ObservableObject {
       let jsonData = try? JSONEncoder().encode(blendShapes),
       let jsonString = String(data: jsonData, encoding: .utf8)
     else { return }
-    print("JSON string: \(jsonString)")
+//    print("JSON string: \(jsonString)")
 
     manager.defaultSocket.emit("blendShapes", jsonString)
   }
