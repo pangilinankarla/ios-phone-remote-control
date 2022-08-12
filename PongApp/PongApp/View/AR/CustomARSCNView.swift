@@ -84,8 +84,8 @@ extension CustomARSCNView: ARSessionDelegate, ARSCNViewDelegate {
     }
 
     if !(expressions == result.1) {
-      expressions = result.1
-      // TODO: ❗️ Call socket – send `expression` && Send Unknown if empty ❗️
+      expressions.removeAll()
+      result.1.forEach { expressions.append($0.copy() as! Expression) }
       print("New expressions: \(expressions)\n")
       
       let newBlendShape = BlendShape.generateFromExpressions(expressions)

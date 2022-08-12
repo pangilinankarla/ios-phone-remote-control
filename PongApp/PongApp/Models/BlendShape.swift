@@ -76,6 +76,7 @@ extension BlendShape: Equatable {
 
 extension BlendShape {
   static func generateFromExpressions(_ expressions: [Expression]) -> BlendShape {
+    // TODO: ❗️ UPDATE ❗️
     let transformedBlendShape = BlendShape(
       a: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.a.rawValue }) != nil) ? 1 : 0,
       angry: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.angry.rawValue }) != nil) ? 1 : 0,
