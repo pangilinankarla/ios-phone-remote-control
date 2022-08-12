@@ -9,6 +9,8 @@ import ARKit
 
 // MARK: - Neutral
 struct NeutralExpression: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "Neutral"
   }
@@ -48,6 +50,8 @@ struct NeutralExpression: Expression {
 
 // MARK: - LookLeft
 struct LookLeftExpression: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "LookLeft"
   }
@@ -73,6 +77,8 @@ struct LookLeftExpression: Expression {
 
 // MARK: - LookRight
 struct LookRightExpression: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "LookRight"
   }
@@ -98,6 +104,8 @@ struct LookRightExpression: Expression {
 
 // MARK: - LookUp
 struct LookUpExpression: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "LookUp"
   }
@@ -123,6 +131,8 @@ struct LookUpExpression: Expression {
 
 // MARK: - LookDown
 struct LookDownExpression: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "LookDown"
   }
@@ -158,6 +168,8 @@ struct LookDownExpression: Expression {
 
 // MARK: - Blink
 struct BlinkExpression: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "Blink"
   }
@@ -183,6 +195,8 @@ struct BlinkExpression: Expression {
 
 // MARK: - BlinkLeft
 struct BlinkLeftExpression: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "BlinkLeft"
   }
@@ -210,6 +224,8 @@ struct BlinkLeftExpression: Expression {
 
 // MARK: - BlinkRight
 struct BlinkRightExpression: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "BlinkRight"
   }
@@ -236,6 +252,8 @@ struct BlinkRightExpression: Expression {
 }
 
 struct Angry: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "Angry"
   }
@@ -268,6 +286,8 @@ struct Angry: Expression {
 }
   
   struct Joy: Expression {
+    var value: Double = 0.0
+    
     var name: String {
       "Joy"
     }
@@ -296,6 +316,8 @@ struct Angry: Expression {
 }
 
 struct Fun: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "Fun"
   }
@@ -336,6 +358,8 @@ struct Fun: Expression {
 }
 
 struct Sorrow: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "Sorrow"
   }

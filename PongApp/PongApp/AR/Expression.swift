@@ -11,6 +11,7 @@ protocol Expression: IsEqual {
   var name: String { get }
   var blendShapePresetName: String { get }
   var description: String { get }
+  var value: Double { get set }
   
   // should return true when the ARFaceAnchor is performing the expression we want
   func isExpressing(from: ARFaceAnchor) -> Bool
@@ -33,7 +34,6 @@ extension Expression {
   func isEqualTo(_ object: Any) -> Bool {
     guard let other = object as? Expression else { return false }
     return name == other.name
-    && blendShapePresetName == other.blendShapePresetName
-    && description == other.description
+      && value == other.value
   }
 }

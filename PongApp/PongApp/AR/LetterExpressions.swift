@@ -9,6 +9,8 @@ import ARKit
 
 // MARK: - A
 struct LetterAExpression: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "A"
   }
@@ -29,6 +31,8 @@ struct LetterAExpression: Expression {
 }
 
 struct LetterIExpression: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "I"
   }
@@ -55,6 +59,8 @@ struct LetterIExpression: Expression {
 }
 
 struct LetterUExpression: Expression {
+  var value: Double = 0.0
+  
   var name: String {
     "U"
   }
@@ -81,6 +87,8 @@ struct LetterUExpression: Expression {
 }
 
 struct LetterEExpression: Expression {
+  var value: Double = 0.0
+
   var name: String {
     "E"
   }
@@ -107,6 +115,8 @@ struct LetterEExpression: Expression {
 }
 
 struct LetterOExpression: Expression {
+  var value: Double = 0.0
+
   var name: String {
     "O"
   }
