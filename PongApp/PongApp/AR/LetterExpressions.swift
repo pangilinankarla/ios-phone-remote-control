@@ -79,3 +79,55 @@ struct LetterUExpression: Expression {
     && mouthLeft.doubleValue.roundToPlaces(2) < 0.3
   }
 }
+
+struct LetterEExpression: Expression {
+  var name: String {
+    "E"
+  }
+
+  var blendShapePresetName: String {
+    "e"
+  }
+  
+  var description: String {
+    "saying `E`"
+  }
+
+  func isExpressing(from: ARFaceAnchor) -> Bool {
+    guard
+      let jawOpen = from.blendShapes[.jawOpen],
+      let mouthSmileLeft = from.blendShapes[.mouthSmileLeft],
+      let mouthSmileRight = from.blendShapes[.mouthSmileRight]
+    else { return false }
+      
+    return jawOpen.doubleValue.roundToPlaces(1) > 0.2
+    && mouthSmileLeft.doubleValue.roundToPlaces(1) < 0.5
+    && mouthSmileRight.doubleValue.roundToPlaces(1) < 0.5
+  }
+}
+
+struct LetterOExpression: Expression {
+  var name: String {
+    "O"
+  }
+
+  var blendShapePresetName: String {
+    "o"
+  }
+  
+  var description: String {
+    "saying `O`"
+  }
+
+  func isExpressing(from: ARFaceAnchor) -> Bool {
+    guard
+      let jawOpen = from.blendShapes[.jawOpen],
+      let mouthLowerDownLeft = from.blendShapes[.mouthLowerDownLeft],
+      let mouthLowerDownRight = from.blendShapes[.mouthLowerDownRight]
+    else { return false }
+  
+    return jawOpen.doubleValue.roundToPlaces(1) > 0.2
+    && mouthLowerDownLeft.doubleValue.roundToPlaces(1) < 0.3
+    && mouthLowerDownRight.doubleValue.roundToPlaces(1) < 0.3
+  }
+}
