@@ -234,3 +234,103 @@ struct BlinkRightExpression: Expression {
     return eyeBlinkLeft.doubleValue.roundToPlaces(1) > 0.4
   }
 }
+
+struct Angry: Expression {
+  var name: String {
+    "Angry"
+  }
+  
+  var blendShapePresetName: String {
+    "Angry"
+  }
+  
+  var description: String {
+    "Angry"
+  }
+  
+  func isExpressing(from: ARFaceAnchor) -> Bool {
+    guard
+      let noseSnearLeft = from.blendShapes[.noseSneerLeft],
+      let noseSnearRight = from.blendShapes[.noseSneerRight],
+      let eyeSquintLeft = from.blendShapes[.eyeSquintLeft],
+      let eyeSquintRight = from.blendShapes[.eyeSquintRight],
+      let mouthFrownLeft = from.blendShapes[.mouthFrownLeft],
+      let mouthFrownRight = from.blendShapes[.mouthFrownRight]
+    else { return false }
+
+    return noseSnearLeft.doubleValue.roundToPlaces(2) > 0.05
+    && noseSnearRight.doubleValue.roundToPlaces(2) > 0.05
+    && eyeSquintLeft.doubleValue.roundToPlaces(2) > 0.20
+    && eyeSquintRight.doubleValue.roundToPlaces(2) > 0.20
+    && mouthFrownLeft.doubleValue.roundToPlaces(2) > 0.05
+    && mouthFrownRight.doubleValue.roundToPlaces(2) > 0.05
+  }
+}
+  
+  struct Joy: Expression {
+    var name: String {
+      "Joy"
+    }
+    
+    var blendShapePresetName: String {
+      "Joy"
+    }
+    
+    var description: String {
+      "Joy"
+    }
+    
+    func isExpressing(from: ARFaceAnchor) -> Bool {
+      guard
+        let mouthSmileLeft = from.blendShapes[.mouthSmileLeft],
+        let mouthSmileRight = from.blendShapes[.mouthSmileRight],
+        let mouthDimpleLeft = from.blendShapes[.mouthDimpleLeft],
+        let mouthDimpleRight = from.blendShapes[.mouthDimpleRight]
+      else { return false }
+
+      return mouthSmileLeft.doubleValue.roundToPlaces(2) > 0.75
+      && mouthSmileRight.doubleValue.roundToPlaces(2) > 0.75
+      && mouthDimpleLeft.doubleValue.roundToPlaces(2) > 0.05
+      && mouthDimpleRight.doubleValue.roundToPlaces(2) > 0.05
+    }
+}
+
+struct Fun: Expression {
+  var name: String {
+    "Fun"
+  }
+  
+  var blendShapePresetName: String {
+    "Fun"
+  }
+  
+  var description: String {
+    "Fun"
+  }
+  
+  func isExpressing(from: ARFaceAnchor) -> Bool {
+    guard
+      let mouthSmileLeft = from.blendShapes[.mouthSmileLeft],
+      let mouthSmileRight = from.blendShapes[.mouthSmileRight],
+      let mouthDimpleLeft = from.blendShapes[.mouthDimpleLeft],
+      let mouthDimpleRight = from.blendShapes[.mouthDimpleRight],
+      let mouthUpperUpLeft = from.blendShapes[.mouthUpperUpLeft],
+      let mouthUpperUpRight = from.blendShapes[.mouthUpperUpRight],
+      let mouthLowerDownLeft = from.blendShapes[.mouthLowerDownLeft],
+      let mouthLowerDownRight = from.blendShapes[.mouthLowerDownRight],
+      let eyeWideLeft = from.blendShapes[.eyeWideLeft],
+      let eyeWideRight = from.blendShapes[.eyeWideRight]
+    else { return false }
+
+    return mouthSmileLeft.doubleValue.roundToPlaces(2) > 0.70
+    && mouthSmileRight.doubleValue.roundToPlaces(2) > 0.70
+    && mouthDimpleLeft.doubleValue.roundToPlaces(2) > 0.05
+    && mouthDimpleRight.doubleValue.roundToPlaces(2) > 0.05
+    && mouthUpperUpLeft.doubleValue.roundToPlaces(2) > 0.25
+    && mouthUpperUpRight.doubleValue.roundToPlaces(2) > 0.25
+    && mouthLowerDownLeft.doubleValue.roundToPlaces(2) > 0.5
+    && mouthLowerDownRight.doubleValue.roundToPlaces(2) > 0.5
+    && eyeWideLeft.doubleValue.roundToPlaces(2) > 0.2
+    && eyeWideRight.doubleValue.roundToPlaces(2) > 0.2
+  }
+}

@@ -19,6 +19,9 @@ final class CustomARSCNView: ARSCNView {
     BlinkExpression(),
     BlinkLeftExpression(),
     BlinkRightExpression(),
+    Angry(),
+    Joy(),
+    Fun(),
   ]
   var logger: ARSCNViewLogger?
   private var expressions = [Expression]()
