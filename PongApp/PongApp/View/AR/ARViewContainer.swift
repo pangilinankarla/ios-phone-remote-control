@@ -15,11 +15,13 @@ protocol ARSCNViewLogger {
 // MARK: - ARViewContainer
 struct ARViewContainer: UIViewRepresentable {
   typealias UIViewType = CustomARSCNView
+  @ObservedObject var service: SocketService
   @Binding var message: String
 
   func makeUIView(context: Context) -> CustomARSCNView {
     let arView = CustomARSCNView(frame: .zero)
     arView.logger = self
+    arView.service = service
     arView.setupForFaceTracking()
     
     return arView

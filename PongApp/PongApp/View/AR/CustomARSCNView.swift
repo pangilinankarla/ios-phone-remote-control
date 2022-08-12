@@ -25,6 +25,7 @@ final class CustomARSCNView: ARSCNView {
     LetterAExpression(),
   ]
   var logger: ARSCNViewLogger?
+  var service: SocketService?
   private var expressions = [Expression]()
   private var expressionString = ""
 }
