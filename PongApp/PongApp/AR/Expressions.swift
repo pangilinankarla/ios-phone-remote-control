@@ -334,3 +334,33 @@ struct Fun: Expression {
     && eyeWideRight.doubleValue.roundToPlaces(2) > 0.2
   }
 }
+
+struct Sorrow: Expression {
+  var name: String {
+    "Sorrow"
+  }
+  
+  var blendShapePresetName: String {
+    "Sorrow"
+  }
+  
+  var description: String {
+    "Sorrow"
+  }
+  
+  func isExpressing(from: ARFaceAnchor) -> Bool {
+    guard
+      let browInnerUp = from.blendShapes[.browInnerUp],
+      let browOuterUpLeft = from.blendShapes[.browOuterUpLeft],
+      let browOuterUpRight = from.blendShapes[.browOuterUpRight],
+      let mouthLowerDownRight = from.blendShapes[.mouthLowerDownRight],
+      let mouthLowerDownLeft = from.blendShapes[.mouthLowerDownLeft]
+    else { return false }
+    
+    return browInnerUp.doubleValue.roundToPlaces(2) > 0.1
+    && browOuterUpLeft.doubleValue.roundToPlaces(2) < 0.1
+    && browOuterUpRight.doubleValue.roundToPlaces(2) < 0.1
+    && mouthLowerDownRight.doubleValue.roundToPlaces(2) < 0.05
+    && mouthLowerDownLeft.doubleValue.roundToPlaces(2) < 0.05
+  }
+}
