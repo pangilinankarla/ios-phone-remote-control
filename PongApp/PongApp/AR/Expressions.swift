@@ -7,6 +7,45 @@
 
 import ARKit
 
+// MARK: - Neutral
+struct NeutralExpression: Expression {
+  var name: String {
+    "Neutral"
+  }
+
+  var blendShapePresetName: String {
+    name
+  }
+
+  var description: String {
+    name.lowercased()
+  }
+
+  func isExpressing(from: ARFaceAnchor) -> Bool {
+    guard
+      let mouthClose = from.blendShapes[.mouthClose],
+      let jawOpen = from.blendShapes[.jawOpen]
+    else { return false }
+
+    return mouthClose.doubleValue.roundToPlaces(2) < 0.1
+     && jawOpen.doubleValue.roundToPlaces(2) < 0.3
+  }
+
+  func isDoingWrongExpression(from: ARFaceAnchor) -> Bool {
+    guard
+      let eyeSquintLeft = from.blendShapes[.eyeSquintLeft],
+      let eyeSquintRight = from.blendShapes[.eyeSquintRight],
+      let eyeWideLeft = from.blendShapes[.eyeWideLeft],
+      let eyeWideRight = from.blendShapes[.eyeWideRight]
+    else { return false }
+    
+    return eyeSquintLeft.doubleValue.roundToPlaces(1) > 0.7
+      && eyeSquintRight.doubleValue.roundToPlaces(1) > 0.7
+      && eyeWideLeft.doubleValue.roundToPlaces(1) > 0.7
+      && eyeWideRight.doubleValue.roundToPlaces(1) > 0.7
+  }
+}
+
 // MARK: - LookLeft
 struct LookLeftExpression: Expression {
   var name: String {

@@ -11,6 +11,7 @@ import SceneKit
 
 final class CustomARSCNView: ARSCNView {
   private let validExpressions: [Expression] = [
+    NeutralExpression(),
     LookLeftExpression(),
     LookRightExpression(),
     LookUpExpression(),
@@ -73,7 +74,7 @@ extension CustomARSCNView: ARSessionDelegate, ARSCNViewDelegate {
 
     if !(expressions == result.1) {
       expressions = result.1
-      // TODO: ❗️ Call socket – send `expression` ❗️
+      // TODO: ❗️ Call socket – send `expression` && Send Unknown if empty ❗️
       print("New expressions: \(expressions)\n")
     }
   }
@@ -141,7 +142,7 @@ extension CustomARSCNView: ARSessionDelegate, ARSCNViewDelegate {
 
     let result = !faceResultArray.isEmpty ? "You are \(faceResultArray.joined(separator: ", "))" : defaultString
 
-    let expressionArr: [Expression] = validExpressions.filter { $0.isExpressing(from: anchor) }
+    let expressionArr: [Expression] = validExpressions.filter { $0.isExpressing(from: anchor) && !$0.isDoingWrongExpression(from: anchor) }
 
     return (result, expressionArr)
   }
