@@ -53,6 +53,56 @@ struct LookRightExpression: Expression {
     else { return false }
     
     return eyeLookInRight.doubleValue.roundToPlaces(1) > 0.4
-    && eyeLookOutLeft.doubleValue.roundToPlaces(1) > 0.4
+      && eyeLookOutLeft.doubleValue.roundToPlaces(1) > 0.4
+  }
+}
+
+// MARK: - LookUp
+struct LookUpExpression: Expression {
+  var name: String {
+    "LookUp"
+  }
+  
+  var blendShapePresetName: String {
+    "Lookup"
+  }
+  
+  var description: String {
+    "looking up"
+  }
+  
+  func isExpressing(from: ARFaceAnchor) -> Bool {
+    guard
+      let eyeLookUpLeft = from.blendShapes[.eyeLookUpLeft],
+      let eyeLookUpRight = from.blendShapes[.eyeLookUpRight]
+    else { return false }
+    
+    return eyeLookUpLeft.doubleValue.roundToPlaces(1) > 0.4
+      && eyeLookUpRight.doubleValue.roundToPlaces(1) > 0.4
+  }
+}
+
+// MARK: - LookDown
+struct LookDownExpression: Expression {
+  var name: String {
+    "LookDown"
+  }
+  
+  var blendShapePresetName: String {
+    "Lookdown"
+  }
+  
+  var description: String {
+    "looking down"
+  }
+  
+  func isExpressing(from: ARFaceAnchor) -> Bool {
+    guard
+      let eyeLookDownLeft = from.blendShapes[.eyeLookDownLeft],
+      let eyeLookDownRight = from.blendShapes[.eyeLookDownRight]
+    else { return false }
+    
+    return eyeLookDownLeft.doubleValue.roundToPlaces(1) > 0.1
+      && eyeLookDownRight.doubleValue.roundToPlaces(1) > 0.1
   }
 }

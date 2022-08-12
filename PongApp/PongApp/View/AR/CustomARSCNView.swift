@@ -13,6 +13,8 @@ final class CustomARSCNView: ARSCNView {
   private let validExpressions: [Expression] = [
     LookLeftExpression(),
     LookRightExpression(),
+    LookUpExpression(),
+    LookDownExpression(),
   ]
   var logger: ARSCNViewLogger?
   private var expressions = [Expression]()
