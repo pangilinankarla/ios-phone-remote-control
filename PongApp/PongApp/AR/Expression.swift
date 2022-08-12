@@ -7,7 +7,7 @@
 
 import ARKit
 
-protocol Expression: IsEqual {
+protocol Expression: IsEqual, NSCopying {
   var name: String { get }
   var blendShapePresetName: String { get }
   var description: String { get }

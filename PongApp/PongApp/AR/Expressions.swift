@@ -8,7 +8,7 @@
 import ARKit
 
 // MARK: - Neutral
-struct NeutralExpression: Expression {
+class NeutralExpression: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -46,10 +46,16 @@ struct NeutralExpression: Expression {
       && eyeWideLeft.doubleValue.roundToPlaces(1) > 0.7
       && eyeWideRight.doubleValue.roundToPlaces(1) > 0.7
   }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = NeutralExpression()
+    copy.value = value
+    return copy
+  }
 }
 
 // MARK: - LookLeft
-struct LookLeftExpression: Expression {
+class LookLeftExpression: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -73,10 +79,16 @@ struct LookLeftExpression: Expression {
     return eyeLookInLeft.doubleValue.roundToPlaces(1) > 0.4
       && eyeLookOutRight.doubleValue.roundToPlaces(1) > 0.4
   }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = LookLeftExpression()
+    copy.value = value
+    return copy
+  }
 }
 
 // MARK: - LookRight
-struct LookRightExpression: Expression {
+class LookRightExpression: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -100,10 +112,16 @@ struct LookRightExpression: Expression {
     return eyeLookInRight.doubleValue.roundToPlaces(1) > 0.4
       && eyeLookOutLeft.doubleValue.roundToPlaces(1) > 0.4
   }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = LookRightExpression()
+    copy.value = value
+    return copy
+  }
 }
 
 // MARK: - LookUp
-struct LookUpExpression: Expression {
+class LookUpExpression: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -127,10 +145,16 @@ struct LookUpExpression: Expression {
     return eyeLookUpLeft.doubleValue.roundToPlaces(1) > 0.4
       && eyeLookUpRight.doubleValue.roundToPlaces(1) > 0.4
   }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = LookUpExpression()
+    copy.value = value
+    return copy
+  }
 }
 
 // MARK: - LookDown
-struct LookDownExpression: Expression {
+class LookDownExpression: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -163,6 +187,12 @@ struct LookDownExpression: Expression {
     
     return eyeBlinkLeft.doubleValue.roundToPlaces(1) > 0.8
       && eyeBlinkRight.doubleValue.roundToPlaces(1) > 0.8
+  }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = LookDownExpression()
+    copy.value = value
+    return copy
   }
 }
 
@@ -200,10 +230,16 @@ class BlinkExpression: Expression {
 
     return true
   }
+  
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = BlinkExpression()
+    copy.value = value
+    return copy
+  }
 }
 
 // MARK: - BlinkLeft
-struct BlinkLeftExpression: Expression {
+class BlinkLeftExpression: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -229,10 +265,16 @@ struct BlinkLeftExpression: Expression {
     
     return eyeBlinkRight.doubleValue.roundToPlaces(1) > 0.4
   }
+  
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = BlinkLeftExpression()
+    copy.value = value
+    return copy
+  }
 }
 
 // MARK: - BlinkRight
-struct BlinkRightExpression: Expression {
+class BlinkRightExpression: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -258,9 +300,15 @@ struct BlinkRightExpression: Expression {
     
     return eyeBlinkLeft.doubleValue.roundToPlaces(1) > 0.4
   }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = BlinkRightExpression()
+    copy.value = value
+    return copy
+  }
 }
 
-struct Angry: Expression {
+class Angry: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -292,9 +340,15 @@ struct Angry: Expression {
     && mouthFrownLeft.doubleValue.roundToPlaces(2) > 0.05
     && mouthFrownRight.doubleValue.roundToPlaces(2) > 0.05
   }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = Angry()
+    copy.value = value
+    return copy
+  }
 }
   
-  struct Joy: Expression {
+  class Joy: Expression {
     var value: Double = 0.0
     
     var name: String {
@@ -322,9 +376,15 @@ struct Angry: Expression {
       && mouthDimpleLeft.doubleValue.roundToPlaces(2) > 0.05
       && mouthDimpleRight.doubleValue.roundToPlaces(2) > 0.05
     }
+
+    func copy(with zone: NSZone? = nil) -> Any {
+      let copy = Joy()
+      copy.value = value
+      return copy
+    }
 }
 
-struct Fun: Expression {
+class Fun: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -364,9 +424,15 @@ struct Fun: Expression {
     && eyeWideLeft.doubleValue.roundToPlaces(2) > 0.2
     && eyeWideRight.doubleValue.roundToPlaces(2) > 0.2
   }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = Joy()
+    copy.value = value
+    return copy
+  }
 }
 
-struct Sorrow: Expression {
+class Sorrow: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -395,5 +461,11 @@ struct Sorrow: Expression {
     && browOuterUpRight.doubleValue.roundToPlaces(2) < 0.1
     && mouthLowerDownRight.doubleValue.roundToPlaces(2) < 0.05
     && mouthLowerDownLeft.doubleValue.roundToPlaces(2) < 0.05
+  }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = Sorrow()
+    copy.value = value
+    return copy
   }
 }

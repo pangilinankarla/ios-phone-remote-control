@@ -8,7 +8,7 @@
 import ARKit
 
 // MARK: - A
-struct LetterAExpression: Expression {
+class LetterAExpression: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -28,9 +28,15 @@ struct LetterAExpression: Expression {
     
     return jawOpen.doubleValue.roundToPlaces(1) > 0.3
   }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = LetterAExpression()
+    copy.value = value
+    return copy
+  }
 }
 
-struct LetterIExpression: Expression {
+class LetterIExpression: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -56,9 +62,15 @@ struct LetterIExpression: Expression {
     && mouthSmileRight.doubleValue.roundToPlaces(2) > 0.3
     && mouthSmileLeft.doubleValue.roundToPlaces(2) > 0.3
   }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = LetterIExpression()
+    copy.value = value
+    return copy
+  }
 }
 
-struct LetterUExpression: Expression {
+class LetterUExpression: Expression {
   var value: Double = 0.0
   
   var name: String {
@@ -84,9 +96,15 @@ struct LetterUExpression: Expression {
     && mouthRight.doubleValue.roundToPlaces(2) < 0.3
     && mouthLeft.doubleValue.roundToPlaces(2) < 0.3
   }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = LetterUExpression()
+    copy.value = value
+    return copy
+  }
 }
 
-struct LetterEExpression: Expression {
+class LetterEExpression: Expression {
   var value: Double = 0.0
 
   var name: String {
@@ -112,9 +130,15 @@ struct LetterEExpression: Expression {
     && mouthSmileLeft.doubleValue.roundToPlaces(1) < 0.5
     && mouthSmileRight.doubleValue.roundToPlaces(1) < 0.5
   }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = LetterEExpression()
+    copy.value = value
+    return copy
+  }
 }
 
-struct LetterOExpression: Expression {
+class LetterOExpression: Expression {
   var value: Double = 0.0
 
   var name: String {
@@ -139,5 +163,11 @@ struct LetterOExpression: Expression {
     return jawOpen.doubleValue.roundToPlaces(1) > 0.2
     && mouthLowerDownLeft.doubleValue.roundToPlaces(1) < 0.3
     && mouthLowerDownRight.doubleValue.roundToPlaces(1) < 0.3
+  }
+
+  func copy(with zone: NSZone? = nil) -> Any {
+    let copy = LetterOExpression()
+    copy.value = value
+    return copy
   }
 }
