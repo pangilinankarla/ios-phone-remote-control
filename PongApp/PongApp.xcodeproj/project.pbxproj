@@ -25,6 +25,7 @@
 		CBF0AA3328A6081C0067BB74 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF0AA3228A6081C0067BB74 /* Expression.swift */; };
 		CBF0AA3628A619300067BB74 /* Expressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF0AA3528A619300067BB74 /* Expressions.swift */; };
 		CBF0AA3928A62FDA0067BB74 /* IsEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF0AA3828A62FDA0067BB74 /* IsEqual.swift */; };
+		CBF0AA3B28A63E280067BB74 /* LetterExpressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF0AA3A28A63E280067BB74 /* LetterExpressions.swift */; };
 		EF46FE436F41E5B58D91E37C /* Pods_PongApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC54087EC8E99398A82FA4F1 /* Pods_PongApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		CBF0AA3228A6081C0067BB74 /* Expression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
 		CBF0AA3528A619300067BB74 /* Expressions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expressions.swift; sourceTree = "<group>"; };
 		CBF0AA3828A62FDA0067BB74 /* IsEqual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsEqual.swift; sourceTree = "<group>"; };
+		CBF0AA3A28A63E280067BB74 /* LetterExpressions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterExpressions.swift; sourceTree = "<group>"; };
 		FC54087EC8E99398A82FA4F1 /* Pods_PongApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PongApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC61995ECC71CF3C516634F9 /* Pods-PongApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PongApp.debug.xcconfig"; path = "Target Support Files/Pods-PongApp/Pods-PongApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 			children = (
 				CBF0AA3228A6081C0067BB74 /* Expression.swift */,
 				CBF0AA3528A619300067BB74 /* Expressions.swift */,
+				CBF0AA3A28A63E280067BB74 /* LetterExpressions.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				7CEC207D28A4B56800A80BF5 /* Login.swift in Sources */,
 				7CEC206928A4AF8000A80BF5 /* PongAppApp.swift in Sources */,
 				7CEC207F28A4BDA400A80BF5 /* ARViewContainer.swift in Sources */,
+				CBF0AA3B28A63E280067BB74 /* LetterExpressions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

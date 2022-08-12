@@ -22,6 +22,7 @@ final class CustomARSCNView: ARSCNView {
     Angry(),
     Joy(),
     Fun(),
+    LetterAExpression(),
   ]
   var logger: ARSCNViewLogger?
   private var expressions = [Expression]()
