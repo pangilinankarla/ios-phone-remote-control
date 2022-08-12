@@ -105,4 +105,93 @@ struct LookDownExpression: Expression {
     return eyeLookDownLeft.doubleValue.roundToPlaces(1) > 0.1
       && eyeLookDownRight.doubleValue.roundToPlaces(1) > 0.1
   }
+
+  func isDoingWrongExpression(from: ARFaceAnchor) -> Bool {
+    guard
+      let eyeBlinkLeft = from.blendShapes[.eyeBlinkLeft],
+      let eyeBlinkRight = from.blendShapes[.eyeBlinkRight]
+    else { return false }
+    
+    return eyeBlinkLeft.doubleValue.roundToPlaces(1) > 0.8
+      && eyeBlinkRight.doubleValue.roundToPlaces(1) > 0.8
+  }
+}
+
+// MARK: - Blink
+struct BlinkExpression: Expression {
+  var name: String {
+    "Blink"
+  }
+  
+  var blendShapePresetName: String {
+    "Blink"
+  }
+  
+  var description: String {
+    "blinked"
+  }
+  
+  func isExpressing(from: ARFaceAnchor) -> Bool {
+    guard
+      let eyeBlinkLeft = from.blendShapes[.eyeBlinkLeft],
+      let eyeBlinkRight = from.blendShapes[.eyeBlinkRight]
+    else { return false }
+    
+    return eyeBlinkLeft.doubleValue.roundToPlaces(1) > 0.8
+      && eyeBlinkRight.doubleValue.roundToPlaces(1) > 0.8
+  }
+}
+
+// MARK: - BlinkLeft
+struct BlinkLeftExpression: Expression {
+  var name: String {
+    "BlinkLeft"
+  }
+  
+  var blendShapePresetName: String {
+    "BlinkL"
+  }
+  
+  var description: String {
+    "blinked left"
+  }
+  
+  func isExpressing(from: ARFaceAnchor) -> Bool {
+    guard let eyeBlinkLeft = from.blendShapes[.eyeBlinkLeft] else { return false }
+    
+    return eyeBlinkLeft.doubleValue.roundToPlaces(1) > 0.8
+  }
+
+  func isDoingWrongExpression(from: ARFaceAnchor) -> Bool {
+    guard let eyeBlinkRight = from.blendShapes[.eyeBlinkRight] else { return false }
+    
+    return eyeBlinkRight.doubleValue.roundToPlaces(1) > 0.4
+  }
+}
+
+// MARK: - BlinkRight
+struct BlinkRightExpression: Expression {
+  var name: String {
+    "BlinkRight"
+  }
+  
+  var blendShapePresetName: String {
+    "BlinkR"
+  }
+  
+  var description: String {
+    "blinked right"
+  }
+  
+  func isExpressing(from: ARFaceAnchor) -> Bool {
+    guard let eyeBlinkRight = from.blendShapes[.eyeBlinkRight] else { return false }
+    
+    return eyeBlinkRight.doubleValue.roundToPlaces(1) > 0.8
+  }
+  
+  func isDoingWrongExpression(from: ARFaceAnchor) -> Bool {
+    guard let eyeBlinkLeft = from.blendShapes[.eyeBlinkLeft] else { return false }
+    
+    return eyeBlinkLeft.doubleValue.roundToPlaces(1) > 0.4
+  }
 }

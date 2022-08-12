@@ -15,6 +15,9 @@ final class CustomARSCNView: ARSCNView {
     LookRightExpression(),
     LookUpExpression(),
     LookDownExpression(),
+    BlinkExpression(),
+    BlinkLeftExpression(),
+    BlinkRightExpression(),
   ]
   var logger: ARSCNViewLogger?
   private var expressions = [Expression]()
