@@ -24,6 +24,8 @@ final class CustomARSCNView: ARSCNView {
     Fun(),
     Sorrow(),
     LetterAExpression(),
+    LetterIExpression(),
+    LetterUExpression(),
   ]
   var logger: ARSCNViewLogger?
   var service: SocketService?
