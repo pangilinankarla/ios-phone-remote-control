@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct ARFaceView: View {
+  @ObservedObject var service: SocketService
+
+  init(service: SocketService) {
+    self.service = service
+    service.establishConnection()
+  }
+
   @State private var log = ""
     var body: some View {
       VStack {
-        ARViewContainer(message: $log)
+        ARViewContainer(service: service, message: $log)
           .edgesIgnoringSafeArea(.all)
         
         Text("\(log)")
@@ -22,6 +29,6 @@ struct ARFaceView: View {
 
 struct ARFaceView_Previews: PreviewProvider {
     static var previews: some View {
-        ARFaceView()
+      ARFaceView(service: SocketService())
     }
 }

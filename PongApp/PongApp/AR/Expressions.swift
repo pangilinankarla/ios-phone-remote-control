@@ -14,7 +14,7 @@ struct NeutralExpression: Expression {
   }
 
   var blendShapePresetName: String {
-    name
+    "neutral"
   }
 
   var description: String {
@@ -53,7 +53,7 @@ struct LookLeftExpression: Expression {
   }
 
   var blendShapePresetName: String {
-    "Lookleft"
+    "lookleft"
   }
   
   var description: String {
@@ -78,7 +78,7 @@ struct LookRightExpression: Expression {
   }
   
   var blendShapePresetName: String {
-    "Lookright"
+    "lookright"
   }
   
   var description: String {
@@ -103,7 +103,7 @@ struct LookUpExpression: Expression {
   }
   
   var blendShapePresetName: String {
-    "Lookup"
+    "lookup"
   }
   
   var description: String {
@@ -128,7 +128,7 @@ struct LookDownExpression: Expression {
   }
   
   var blendShapePresetName: String {
-    "Lookdown"
+    "lookdown"
   }
   
   var description: String {
@@ -163,7 +163,7 @@ struct BlinkExpression: Expression {
   }
   
   var blendShapePresetName: String {
-    "Blink"
+    "blink"
   }
   
   var description: String {
@@ -188,7 +188,7 @@ struct BlinkLeftExpression: Expression {
   }
   
   var blendShapePresetName: String {
-    "BlinkL"
+    "blink_l"
   }
   
   var description: String {
@@ -215,7 +215,7 @@ struct BlinkRightExpression: Expression {
   }
   
   var blendShapePresetName: String {
-    "BlinkR"
+    "blink_r"
   }
   
   var description: String {
@@ -241,7 +241,7 @@ struct Angry: Expression {
   }
   
   var blendShapePresetName: String {
-    "Angry"
+    "angry"
   }
   
   var description: String {
@@ -273,7 +273,7 @@ struct Angry: Expression {
     }
     
     var blendShapePresetName: String {
-      "Joy"
+      "joy"
     }
     
     var description: String {
@@ -301,7 +301,7 @@ struct Fun: Expression {
   }
   
   var blendShapePresetName: String {
-    "Fun"
+    "fun"
   }
   
   var description: String {

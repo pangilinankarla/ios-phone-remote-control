@@ -13,7 +13,8 @@ final class SocketService: ObservableObject {
   private var manager = SocketManager(
     //    socketURL: URL(string: "ws://localhost:3000")!,
 //    socketURL: URL(string: "http://192.168.0.xxx:3000")!,
-    socketURL: URL(string: "https://b74c-125-166-0-117.ap.ngrok.io")!,
+//    socketURL: URL(string: "https://b74c-125-166-0-117.ap.ngrok.io")!,
+    socketURL: URL(string: "https://b873-180-191-223-253.ap.ngrok.io")!,
     config: [.log(true), .compress]
   )
   
@@ -63,5 +64,15 @@ final class SocketService: ObservableObject {
   func sendMoveDown(_ move: Move) {
 //    guard let jsonData = try? JSONEncoder().encode(move) else { return }
     manager.defaultSocket.emit("move", "playerOneDown")
+  }
+
+  func sendBlendShapes(_ blendShapes: BlendShape) {
+    guard
+      let jsonData = try? JSONEncoder().encode(blendShapes),
+      let jsonString = String(data: jsonData, encoding: .utf8)
+    else { return }
+    print("JSON string: \(jsonString)")
+
+    manager.defaultSocket.emit("blendShapes", jsonString)
   }
 }

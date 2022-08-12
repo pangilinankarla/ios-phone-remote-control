@@ -23,10 +23,13 @@ final class CustomARSCNView: ARSCNView {
     Joy(),
     Fun(),
     Sorrow(),
+    LetterAExpression(),
   ]
   var logger: ARSCNViewLogger?
+  var service: SocketService?
   private var expressions = [Expression]()
   private var expressionString = ""
+  private var currentBlendShape: BlendShape?
 }
 
 extension CustomARSCNView: ARSessionDelegate, ARSCNViewDelegate {
@@ -80,6 +83,13 @@ extension CustomARSCNView: ARSessionDelegate, ARSCNViewDelegate {
       expressions = result.1
       // TODO: ❗️ Call socket – send `expression` && Send Unknown if empty ❗️
       print("New expressions: \(expressions)\n")
+      
+      let newBlendShape = BlendShape.generateFromExpressions(expressions)
+      
+      if newBlendShape != currentBlendShape {
+        currentBlendShape = newBlendShape
+        service?.sendBlendShapes(newBlendShape)
+      }
     }
   }
 
