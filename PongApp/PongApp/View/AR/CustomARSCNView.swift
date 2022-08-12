@@ -10,8 +10,12 @@ import RealityKit
 import SceneKit
 
 final class CustomARSCNView: ARSCNView {
+  private let validExpressions: [Expression] = [
+    LookLeftExpression(),
+    LookRightExpression(),
+  ]
   var logger: ARSCNViewLogger?
-  private var expression = FacialExpression()
+  private var expressions = [Expression]()
   private var expressionString = ""
 }
 
@@ -62,14 +66,14 @@ extension CustomARSCNView: ARSessionDelegate, ARSCNViewDelegate {
       logger?.log(expressionString)
     }
 
-    if expression != result.1 {
-      expression = result.1
+    if !(expressions == result.1) {
+      expressions = result.1
       // TODO: ❗️ Call socket – send `expression` ❗️
-      print("New expression: \(expression)\n")
+      print("New expressions: \(expressions)\n")
     }
   }
 
-  func readMyFace(anchor: ARFaceAnchor) -> (String, FacialExpression) {
+  func readMyFace(anchor: ARFaceAnchor) -> (String, [Expression]) {
     let mouthSmileLeft = anchor.blendShapes[.mouthSmileLeft]? .doubleValue ?? 0.0
     let mouthSmileRight = anchor.blendShapes[.mouthSmileRight]?.doubleValue ?? 0.0
     let cheekPuff = anchor.blendShapes[.cheekPuff]?.doubleValue ?? 0.0
@@ -83,19 +87,19 @@ extension CustomARSCNView: ARSessionDelegate, ARSCNViewDelegate {
     let eyeBlinkLeft = anchor.blendShapes[.eyeBlinkLeft]?.doubleValue ?? 0.0
     let eyeBlinkRight = anchor.blendShapes[.eyeBlinkRight]?.doubleValue ?? 0.0
 
-    let facialExpression = FacialExpression(
-      mouthSmileLeft: mouthSmileLeft.roundToPlaces(1),
-      mouthSmileRight: mouthSmileRight.roundToPlaces(1),
-      cheekPuff: cheekPuff.roundToPlaces(1),
-      tongueOut: tongueOut.roundToPlaces(1),
-      jawOpen: jawOpen.roundToPlaces(1),
-      eyeSquintLeft: eyeSquintLeft.roundToPlaces(1),
-      eyeSquintRight: eyeSquintRight.roundToPlaces(1),
-      eyeWideLeft: eyeWideLeft.roundToPlaces(1),
-      eyeWideRight: eyeWideRight.roundToPlaces(1),
-      eyeBlinkLeft: eyeBlinkLeft.roundToPlaces(1),
-      eyeBlinkRight: eyeBlinkRight.roundToPlaces(1)
-    )
+//    let facialExpression = FacialExpression(
+//      mouthSmileLeft: mouthSmileLeft.roundToPlaces(1),
+//      mouthSmileRight: mouthSmileRight.roundToPlaces(1),
+//      cheekPuff: cheekPuff.roundToPlaces(1),
+//      tongueOut: tongueOut.roundToPlaces(1),
+//      jawOpen: jawOpen.roundToPlaces(1),
+//      eyeSquintLeft: eyeSquintLeft.roundToPlaces(1),
+//      eyeSquintRight: eyeSquintRight.roundToPlaces(1),
+//      eyeWideLeft: eyeWideLeft.roundToPlaces(1),
+//      eyeWideRight: eyeWideRight.roundToPlaces(1),
+//      eyeBlinkLeft: eyeBlinkLeft.roundToPlaces(1),
+//      eyeBlinkRight: eyeBlinkRight.roundToPlaces(1)
+//    )
 
     let defaultString = "(No expression)"
     var faceResultArray: [String] = []
@@ -131,6 +135,9 @@ extension CustomARSCNView: ARSessionDelegate, ARSCNViewDelegate {
     }
 
     let result = !faceResultArray.isEmpty ? "You are \(faceResultArray.joined(separator: ", "))" : defaultString
-    return (result, facialExpression)
+
+    let expressionArr: [Expression] = validExpressions.filter { $0.isExpressing(from: anchor) }
+
+    return (result, expressionArr)
   }
 }
