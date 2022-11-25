@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PongRemoteView: View {
-  @ObservedObject var service: SocketService
+  @EnvironmentObject var service: SocketService
   private let gradient = Gradient(colors: [Color("color-dolly"), Color("color-astral")])
   
   var body: some View {
@@ -83,6 +83,6 @@ struct PongRemoteView: View {
 
 struct PongRemoteView_Previews: PreviewProvider {
   static var previews: some View {
-    PongRemoteView(service: SocketService())
+    PongRemoteView()
   }
 }

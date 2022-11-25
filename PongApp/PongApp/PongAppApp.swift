@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct PongAppApp: App {
+  private var service: SocketService! = nil
+
+  init() {
+    service = SocketService()
+    service.establishConnection()
+  }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          NavigationView {
+            ContentView().environmentObject(service)
+          }
         }
     }
 }

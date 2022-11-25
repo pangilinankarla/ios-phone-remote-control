@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+  @EnvironmentObject var service: SocketService
   @State var isLoggedIn: Bool = false
+
   var body: some View {
     if !isLoggedIn {
-      Login(isLoggedIn: $isLoggedIn)
+//      Login(isLoggedIn: $isLoggedIn)
+      LoginView().environmentObject(service)
     } else {
-      MovementView()
+      MovementView().environmentObject(service)
     }
   }
 }

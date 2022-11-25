@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct MovementView: View {
-  @StateObject private var service = SocketService()
-  
+  @EnvironmentObject var service: SocketService
+
   var body: some View {
     NavigationView {
       Form {
         NavigationLink {
-          PongRemoteView(service: service)
+          PongRemoteView().environmentObject(service)
         } label: {
           Text("Pong Remote")
         }
         
         NavigationLink {
-          ARFaceView(service: service)
+          ARFaceView().environmentObject(service)
         } label: {
           Text("AR Camera")
         }
