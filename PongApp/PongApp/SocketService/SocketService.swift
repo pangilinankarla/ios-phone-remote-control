@@ -11,10 +11,12 @@ import SocketIO
 final class SocketService: ObservableObject {
   // TODO: ❗️ Replace url string to test ❗️
   private var manager = SocketManager(
-    //    socketURL: URL(string: "ws://localhost:3000")!,
-//    socketURL: URL(string: "http://192.168.0.xxx:3000")!,
+//        socketURL: URL(string: "ws://localhost:3000")!,
+//    socketURL: URL(string: "https://192.168.0.xxx:3000")!,
 //    socketURL: URL(string: "https://b74c-125-166-0-117.ap.ngrok.io")!,
-    socketURL: URL(string: "https://b873-180-191-223-253.ap.ngrok.io")!,
+//    socketURL: URL(string: "https://b873-180-191-223-253.ap.ngrok.io")!,
+//    socketURL: URL(string: "ws://localhost:9000")!,
+    socketURL: URL(string: "http://192.168.0.241:9000")!,
     config: [.log(true), .compress]
   )
   
@@ -46,6 +48,16 @@ final class SocketService: ObservableObject {
         }
       }
     }
+
+    socket.on("move-character") { data, ack in
+      print("Move character \(data)")
+//      if let data = data.first as? Data,
+//         let move: Move = data.decodeToObject() {
+//        DispatchQueue.main.async {
+//          self?.moves.append(move)
+//        }
+//      }
+    }
   }
   
   func establishConnection() {
@@ -74,5 +86,35 @@ final class SocketService: ObservableObject {
 //    print("JSON string: \(jsonString)")
 
     manager.defaultSocket.emit("blendShapes", jsonString)
+  }
+}
+
+// AR
+extension SocketService {
+  func joinRoom(_ room: String) {
+    let room = Room(room: "12345abc", session_id: "456xyz", name: nil)
+    guard let data = try? JSONEncoder().encode(room) else { return }
+    let jsonString = String(data: data, encoding: .utf8) ?? ""
+    print("JSON string: \(jsonString)")
+
+    manager.defaultSocket.emitWithAck(
+      "join-room",
+      with: [jsonString]
+    ).timingOut(after: 0) { data in
+      print("join room completion")
+    }
+  }
+
+  func sendMovement(_ movement: Movement) {
+    guard let data = try? JSONEncoder().encode(movement) else { return }
+    let jsonString = String(data: data, encoding: .utf8) ?? ""
+    print("JSON string: \(jsonString)")
+
+    manager.defaultSocket.emitWithAck(
+      "send-movement",
+      with: [jsonString])
+    .timingOut(after: 0) { data in
+      print("sent movement!")
+    }
   }
 }

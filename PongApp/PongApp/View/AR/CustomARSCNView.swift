@@ -92,7 +92,16 @@ extension CustomARSCNView: ARSessionDelegate, ARSCNViewDelegate {
       
       if newBlendShape != currentBlendShape {
         currentBlendShape = newBlendShape
-        service?.sendBlendShapes(newBlendShape)
+//        service?.sendBlendShapes(newBlendShape)
+        service?.sendMovement(
+          Movement(
+            roomId: "12345abc",
+            sessionId: "456xyz",
+            character: Character(
+              blendShape: newBlendShape
+            )
+          )
+        )
       }
     }
   }
