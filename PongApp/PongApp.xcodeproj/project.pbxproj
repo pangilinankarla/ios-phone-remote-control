@@ -16,6 +16,12 @@
 		7CEC207D28A4B56800A80BF5 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEC207C28A4B56800A80BF5 /* Login.swift */; };
 		7CEC207F28A4BDA400A80BF5 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEC207E28A4BDA400A80BF5 /* ARViewContainer.swift */; };
 		CB7CFE7D2930AE140052E35D /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = CB7CFE7C2930AE140052E35D /* CodeScanner */; };
+		CB7CFE7129309ED20052E35D /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7CFE6E29309ED20052E35D /* LoginViewState.swift */; };
+		CB7CFE7229309ED20052E35D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7CFE6F29309ED20052E35D /* LoginView.swift */; };
+		CB7CFE7329309ED20052E35D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7CFE7029309ED20052E35D /* LoginViewModel.swift */; };
+		CB7CFE7829309EDD0052E35D /* LoginField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7CFE7529309EDD0052E35D /* LoginField.swift */; };
+		CB7CFE7929309EDD0052E35D /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7CFE7629309EDD0052E35D /* ImagePickerView.swift */; };
+		CB7CFE7A29309EDD0052E35D /* LoadingDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7CFE7729309EDD0052E35D /* LoadingDialog.swift */; };
 		CB96863528A4F119005F0283 /* Data+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863228A4F119005F0283 /* Data+Decoder.swift */; };
 		CB96863628A4F119005F0283 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863328A4F119005F0283 /* SocketService.swift */; };
 		CB96863728A4F119005F0283 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96863428A4F119005F0283 /* Move.swift */; };
@@ -42,6 +48,12 @@
 		7CEC207C28A4B56800A80BF5 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		7CEC207E28A4BDA400A80BF5 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		7F7FFBEC93506EDAEC1C0EA7 /* Pods-PongApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PongApp.release.xcconfig"; path = "Target Support Files/Pods-PongApp/Pods-PongApp.release.xcconfig"; sourceTree = "<group>"; };
+		CB7CFE6E29309ED20052E35D /* LoginViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
+		CB7CFE6F29309ED20052E35D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CB7CFE7029309ED20052E35D /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CB7CFE7529309EDD0052E35D /* LoginField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginField.swift; sourceTree = "<group>"; };
+		CB7CFE7629309EDD0052E35D /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		CB7CFE7729309EDD0052E35D /* LoadingDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingDialog.swift; sourceTree = "<group>"; };
 		CB96863228A4F119005F0283 /* Data+Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Decoder.swift"; sourceTree = "<group>"; };
 		CB96863328A4F119005F0283 /* SocketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		CB96863428A4F119005F0283 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
@@ -127,11 +139,33 @@
 		7CEC207B28A4B55C00A80BF5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB7CFE6D29309EC20052E35D /* Login */,
 				CB96863B28A573F5005F0283 /* AR */,
 				7CEC207C28A4B56800A80BF5 /* Login.swift */,
 				CB96863928A56623005F0283 /* PongRemoteView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CB7CFE6D29309EC20052E35D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CB7CFE7429309EDD0052E35D /* Component */,
+				CB7CFE6F29309ED20052E35D /* LoginView.swift */,
+				CB7CFE7029309ED20052E35D /* LoginViewModel.swift */,
+				CB7CFE6E29309ED20052E35D /* LoginViewState.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CB7CFE7429309EDD0052E35D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				CB7CFE7529309EDD0052E35D /* LoginField.swift */,
+				CB7CFE7629309EDD0052E35D /* ImagePickerView.swift */,
+				CB7CFE7729309EDD0052E35D /* LoadingDialog.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		CB96863828A56531005F0283 /* SocketService */ = {
@@ -318,10 +352,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB96863628A4F119005F0283 /* SocketService.swift in Sources */,
+				CB7CFE7929309EDD0052E35D /* ImagePickerView.swift in Sources */,
 				CB96863528A4F119005F0283 /* Data+Decoder.swift in Sources */,
 				CB96864328A58E93005F0283 /* Double+RoundingOff.swift in Sources */,
+				CB7CFE7A29309EDD0052E35D /* LoadingDialog.swift in Sources */,
+				CB7CFE7129309ED20052E35D /* LoginViewState.swift in Sources */,
 				CB96863D28A5744D005F0283 /* CustomARSCNView.swift in Sources */,
 				7CEC207728A4AFB900A80BF5 /* MovementView.swift in Sources */,
+				CB7CFE7829309EDD0052E35D /* LoginField.swift in Sources */,
 				CBF0AA3D28A6501E0067BB74 /* BlendShape.swift in Sources */,
 				CBF0AA3628A619300067BB74 /* Expressions.swift in Sources */,
 				CBF0AA3328A6081C0067BB74 /* Expression.swift in Sources */,
@@ -334,7 +372,9 @@
 				7CEC207D28A4B56800A80BF5 /* Login.swift in Sources */,
 				7CEC206928A4AF8000A80BF5 /* PongAppApp.swift in Sources */,
 				7CEC207F28A4BDA400A80BF5 /* ARViewContainer.swift in Sources */,
+				CB7CFE7229309ED20052E35D /* LoginView.swift in Sources */,
 				CBF0AA3B28A63E280067BB74 /* LetterExpressions.swift in Sources */,
+				CB7CFE7329309ED20052E35D /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
