@@ -9,24 +9,24 @@ import Foundation
 
 struct BlendShape: Codable {
   let id: String = UUID().uuidString
-  var a: Double
-  var angry: Double
-  var blink: Double
-  var blinkLeft: Double
-  var blinkRight: Double
-  var e: Double
-  var fun: Double
-  var i: Double
-  var joy: Double
-  var lookDown: Double
-  var lookLeft: Double
-  var lookRight: Double
-  var lookUp: Double
-  var neutral: Double
-  var o: Double
-  var sorrow: Double
-  var u: Double
-  var unknown: Double
+  var a: Decimal
+  var angry: Decimal
+  var blink: Decimal
+  var blinkLeft: Decimal
+  var blinkRight: Decimal
+  var e: Decimal
+  var fun: Decimal
+  var i: Decimal
+  var joy: Decimal
+  var lookDown: Decimal
+  var lookLeft: Decimal
+  var lookRight: Decimal
+  var lookUp: Decimal
+  var neutral: Decimal
+  var o: Decimal
+  var sorrow: Decimal
+  var u: Decimal
+  var unknown: Decimal
   
   private enum CodingKeys: String, CodingKey {
     case id = "id"
@@ -71,33 +71,5 @@ extension BlendShape: Equatable {
       && lhs.sorrow == rhs.sorrow
       && lhs.u == rhs.u
       && lhs.unknown == rhs.unknown
-  }
-}
-
-extension BlendShape {
-  static func generateFromExpressions(_ expressions: [Expression]) -> BlendShape {
-    // TODO: ❗️ UPDATE ❗️
-    let transformedBlendShape = BlendShape(
-      a: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.a.rawValue }) != nil) ? 1 : 0,
-      angry: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.angry.rawValue }) != nil) ? 1 : 0,
-      blink: expressions.first(where: { $0 is BlinkExpression })?.value ?? 0.0,
-      blinkLeft: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.blinkLeft.rawValue }) != nil) ? 1 : 0,
-      blinkRight: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.blinkRight.rawValue }) != nil) ? 1 : 0,
-      e: 0,
-      fun: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.fun.rawValue }) != nil) ? 1 : 0,
-      i: 0,
-      joy: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.joy.rawValue }) != nil) ? 1 : 0,
-      lookDown: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.lookDown.rawValue }) != nil) ? 1 : 0,
-      lookLeft: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.lookLeft.rawValue }) != nil) ? 1 : 0,
-      lookRight: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.lookRight.rawValue }) != nil) ? 1 : 0,
-      lookUp: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.lookUp.rawValue }) != nil) ? 1 : 0,
-      neutral: (expressions.first(where: { $0.blendShapePresetName == CodingKeys.neutral.rawValue }) != nil) ? 1 : 0,
-      o: 0,
-      sorrow: 0,
-      u: 0,
-      unknown: 0
-    )
-
-    return transformedBlendShape
   }
 }
