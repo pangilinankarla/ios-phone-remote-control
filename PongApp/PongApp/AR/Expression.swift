@@ -7,12 +7,11 @@
 
 import ARKit
 
-protocol Expression: IsEqual, NSCopying {
+protocol Expression {
   var name: String { get }
   var blendShapePresetName: String { get }
   var description: String { get }
-  var value: Double { get set }
-  
+
   // should return true when the ARFaceAnchor is performing the expression we want
   func isExpressing(from: ARFaceAnchor) -> Bool
 
@@ -20,6 +19,8 @@ protocol Expression: IsEqual, NSCopying {
   // For example, if the expression is "Blink Left",
   // then this should return true if the user's right eyelid is also closed.
   func isDoingWrongExpression(from: ARFaceAnchor) -> Bool
+
+  func getValue(from faceAnchor: ARFaceAnchor) -> Decimal
 }
 
 extension Expression {
@@ -29,11 +30,5 @@ extension Expression {
 
   func isDoingWrongExpression(from: ARFaceAnchor) -> Bool {
     return false
-  }
-
-  func isEqualTo(_ object: Any) -> Bool {
-    guard let other = object as? Expression else { return false }
-    return name == other.name
-      && value == other.value
   }
 }
