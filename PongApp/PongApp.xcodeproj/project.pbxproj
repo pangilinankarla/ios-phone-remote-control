@@ -16,6 +16,7 @@
 		7CEC207D28A4B56800A80BF5 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEC207C28A4B56800A80BF5 /* Login.swift */; };
 		7CEC207F28A4BDA400A80BF5 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEC207E28A4BDA400A80BF5 /* ARViewContainer.swift */; };
 		CB7CFE7D2930AE140052E35D /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = CB7CFE7C2930AE140052E35D /* CodeScanner */; };
+		CB39A04929387CB3006E79A8 /* Decimal+RoundingOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39A04829387CB3006E79A8 /* Decimal+RoundingOff.swift */; };
 		CB62DEE62930F4CF007A817C /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB62DEE52930F4CF007A817C /* Room.swift */; };
 		CB7CFE7129309ED20052E35D /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7CFE6E29309ED20052E35D /* LoginViewState.swift */; };
 		CB7CFE7229309ED20052E35D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7CFE6F29309ED20052E35D /* LoginView.swift */; };
@@ -50,6 +51,7 @@
 		7CEC207C28A4B56800A80BF5 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		7CEC207E28A4BDA400A80BF5 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		7F7FFBEC93506EDAEC1C0EA7 /* Pods-PongApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PongApp.release.xcconfig"; path = "Target Support Files/Pods-PongApp/Pods-PongApp.release.xcconfig"; sourceTree = "<group>"; };
+		CB39A04829387CB3006E79A8 /* Decimal+RoundingOff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+RoundingOff.swift"; sourceTree = "<group>"; };
 		CB62DEE52930F4CF007A817C /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		CB7CFE6E29309ED20052E35D /* LoginViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
 		CB7CFE6F29309ED20052E35D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				CB96864228A58E93005F0283 /* Double+RoundingOff.swift */,
+				CB39A04829387CB3006E79A8 /* Decimal+RoundingOff.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				7CEC207D28A4B56800A80BF5 /* Login.swift in Sources */,
 				7CEC206928A4AF8000A80BF5 /* PongAppApp.swift in Sources */,
 				7CEC207F28A4BDA400A80BF5 /* ARViewContainer.swift in Sources */,
+				CB39A04929387CB3006E79A8 /* Decimal+RoundingOff.swift in Sources */,
 				CB7CFE7229309ED20052E35D /* LoginView.swift in Sources */,
 				CBF0AA3B28A63E280067BB74 /* LetterExpressions.swift in Sources */,
 				CB7CFE7329309ED20052E35D /* LoginViewModel.swift in Sources */,
