@@ -16,12 +16,14 @@ final class SocketService: ObservableObject {
 //    socketURL: URL(string: "https://b74c-125-166-0-117.ap.ngrok.io")!,
 //    socketURL: URL(string: "https://b873-180-191-223-253.ap.ngrok.io")!,
 //    socketURL: URL(string: "ws://localhost:9000")!,
-    socketURL: URL(string: "http://192.168.0.241:9000")!,
+    socketURL: URL(string: "http://192.168.0.241:3000")!,
     config: [.log(true), .compress]
   )
   
   @Published var moves: [Move] = .init()
   @Published var message: String = ""
+  private var roomId: String = ""
+  private var sessionId: String = ""
   
   init() {
     let socket = manager.defaultSocket
@@ -47,16 +49,6 @@ final class SocketService: ObservableObject {
           self?.moves.append(move)
         }
       }
-    }
-
-    socket.on("move-character") { data, ack in
-      print("Move character \(data)")
-//      if let data = data.first as? Data,
-//         let move: Move = data.decodeToObject() {
-//        DispatchQueue.main.async {
-//          self?.moves.append(move)
-//        }
-//      }
     }
   }
   
@@ -91,30 +83,53 @@ final class SocketService: ObservableObject {
 
 // AR
 extension SocketService {
-  func joinRoom(_ room: String) {
-    let room = Room(room: "12345abc", session_id: "456xyz", name: nil)
+  func joinRoom(_ room: String, sessionId: String) {
+    self.roomId = room
+    self.sessionId = sessionId
+
+    let room = Room(
+      room: roomId,
+      session_id: sessionId,
+      name: ""
+    )
+    joinRemote(room)
+  }
+
+  private func joinRemote(_ room: Room) {
     guard let data = try? JSONEncoder().encode(room) else { return }
     let jsonString = String(data: data, encoding: .utf8) ?? ""
-    print("JSON string: \(jsonString)")
+    print("Join Remote: \(jsonString)")
 
     manager.defaultSocket.emitWithAck(
-      "join-room",
+      "join-remote",
       with: [jsonString]
     ).timingOut(after: 0) { data in
       print("join room completion")
     }
   }
 
-  func sendMovement(_ movement: Movement) {
+  func sendBlendShape(_ blendShape: BlendShape) {
+    let movement = Movement(
+      roomId: roomId,
+      sessionId: sessionId,
+      character: .init(
+        blendShape: blendShape
+      )
+    )
+
+    sendMovement(movement)
+  }
+
+  private func sendMovement(_ movement: Movement) {
     guard let data = try? JSONEncoder().encode(movement) else { return }
     let jsonString = String(data: data, encoding: .utf8) ?? ""
-    print("JSON string: \(jsonString)")
+//    print("JSON string: \(jsonString)")
 
     manager.defaultSocket.emitWithAck(
-      "send-movement",
+      "send-blend-shape",
       with: [jsonString])
     .timingOut(after: 0) { data in
-      print("sent movement!")
+//      print("sent movement!")
     }
   }
 }

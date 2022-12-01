@@ -119,15 +119,9 @@ extension CustomARSCNView {
   private func sendMovement(_ blendShape: BlendShape?) {
     guard let blendShape else { return }
 
-    service?.sendMovement(
-      Movement(
-        roomId: "12345abc",
-        sessionId: "456xyz",
-        character: Character(
-          blendShape: blendShape
-        )
-      )
-    )
+    print("\nSEND BLENDSHAPE: \(blendShape)\n\n")
+
+    service?.sendBlendShape(blendShape)
   }
 
   private func testSendMovement() {

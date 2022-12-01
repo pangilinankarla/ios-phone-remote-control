@@ -4,8 +4,8 @@ import CodeScanner
 struct LoginView: View {
   @EnvironmentObject var service: SocketService
   @StateObject private var viewModel = LoginViewModel()
-  @State private var username: String = ""
-  @State private var sessionId: String = ""
+  @State private var sessionId: String = "L6xdiMg06nNQs1IqOESxudEtw94EtZux"
+  @State private var roomId: String = "GODYc2V6RTy7PsiPvJ6DRw"
   @State private var selectedImage: UIImage?
   @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
   @State private var isShowingScanner = false
@@ -19,51 +19,49 @@ struct LoginView: View {
         Text("Join a Meeting")
           .font(.title)
         VStack {
-          if let selectedImage {
-            Image(uiImage: selectedImage)
-              .resizable()
-              .scaledToFit()
-              .frame(width: 120)
-            Text("Click to change avatar")
-          } else {
-            Image(systemName: "person.crop.circle.badge.plus")
-              .resizable()
-              .scaledToFit()
-              .frame(width: 120)
-            Text("Click to add avatar")
-          }
+//          if let selectedImage {
+//            Image(uiImage: selectedImage)
+//              .resizable()
+//              .scaledToFit()
+//              .frame(width: 120)
+//            Text("Click to change avatar")
+//          } else {
+//            Image(systemName: "person.crop.circle.badge.plus")
+//              .resizable()
+//              .scaledToFit()
+//              .frame(width: 120)
+//            Text("Click to add avatar")
+//          }
         }
         .foregroundColor(.gray)
         .onTapGesture {
           isShowingImageSourceOption = true
         }
         LoginField(
-          title: "Username",
-          text: $username
-        )
-        Divider()
-        LoginField(
           title: "Session Id",
           text: $sessionId
         )
+        Divider()
+        LoginField(
+          title: "Room Id",
+          text: $roomId
+        )
         Button("Join With Session Id") {
           Task {
-            service.joinRoom("12345abc")
-
+            service.joinRoom(roomId, sessionId: sessionId)
             pushAR = true
-            
-            viewModel.login(
-              LoginRequest(
-                username: username,
-                sessionId: sessionId
-              )
-            )
+//            viewModel.login(
+//              LoginRequest(
+//                username: username,
+//                sessionId: sessionId
+//              )
+//            )
           }
         }
-        Divider()
-        Button("Scan Qr Code") {
-          isShowingScanner = true
-        }
+//        Divider()
+//        Button("Scan Qr Code") {
+//          isShowingScanner = true
+//        }
         NavigationLink(
           destination: ARFaceView().environmentObject(service),
           isActive: self.$pushAR) {
@@ -103,10 +101,10 @@ struct LoginView: View {
     switch result {
     case .success(let result):
       print(result.string)
-      viewModel.login(
-        LoginRequest(
-          username: username,
-          sessionId: result.string))
+//      viewModel.login(
+//        LoginRequest(
+//          username: username,
+//          sessionId: result.string))
     case .failure(let error):
       print("Scanning failed: \(error.localizedDescription)")
     }
@@ -117,6 +115,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
   static var previews: some View {
-    LoginView()
+    LoginView().environmentObject(SocketService())
   }
 }
